@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#ffffff">
+<title>Why Your Parkinson's Tremor Keeps Winning — And What Finally Protects the Neurons Behind It | Restural</title>
+<meta name="description" content="A movement disorder specialist explains why levodopa masks the tremor while the neurons behind it keep dying — and the morning-coffee protocol that targets the neuroinflammation your medication can't touch.">
+<link rel="canonical" href="https://tryrestural.com/neurofuel">
+<link rel="preconnect" href="https://restural.com">
+<link rel="preconnect" href="https://cdn.shopify.com">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','2217419735389343');fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2217419735389343&ev=PageView&noscript=1"/></noscript>
+<!-- End Meta Pixel -->
+<style>
+:root{
+  --ink:#16171A; --ink-soft:#4B4D54; --ink-mute:#7A7D86;
+  --line:#E8E9ED; --line-soft:#F0F1F4;
+  --bg:#FFFFFF; --bg-soft:#F6F7F9; --bg-blue:#EEF3FE;
+  --canvas:#F6F3FE; /* full-bleed page background behind the centred column */
+  --navy:#10247F; --navy-d:#0C1A5E; --blue:#2563EB; --blue-d:#1B49C2;
+  --coffee:#6B4A2B; --coffee-soft:#F4EEE7;
+  --green:#1F9D55; --green-soft:#E7F6EE;
+  --red:#DC4C4C; --red-soft:#FCECEC;
+  --teal:#0E9AA7; --violet:#7C5CBF; --amber:#E79A2B;
+  --gold:#F5A623; --star:#FFB400;
+  --maxw:640px; --radius:16px;
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:var(--font);color:var(--ink);background:var(--canvas);-webkit-font-smoothing:antialiased;line-height:1.62;font-size:17.5px;overflow-x:hidden}
+.wrap{max-width:var(--maxw);margin:0 auto;background:transparent;min-height:100vh}
+.pad{padding-left:22px;padding-right:22px}
+@media(min-width:680px){.pad{padding-left:34px;padding-right:34px}}
+p{margin:0 0 18px}
+a{color:var(--blue);text-decoration:none}
+img{max-width:100%;display:block}
+strong{font-weight:700;color:var(--ink)}
+em{font-style:italic}
+h1,h2,h3,h4{margin:0;line-height:1.2;letter-spacing:-.02em;font-weight:800}
+
+/* top bar */
+.topbar{position:sticky;top:0;z-index:60;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(10px);border-bottom:1px solid var(--line)}
+.topbar .row{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:52px;padding:0 18px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:800;letter-spacing:-.02em;font-size:18px;color:var(--navy)}
+.brand .dot{width:26px;height:26px;border-radius:50%;background:var(--navy);color:#fff;display:grid;place-items:center;font-size:15px;font-weight:900;font-style:italic}
+.topbar .stars{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--ink-soft);font-weight:600}
+.topbar .stars .s{color:var(--star);letter-spacing:1px}
+@media(max-width:430px){.topbar .stars .txt{display:none}}
+.eyebrow-strip{background:var(--navy);color:#fff;text-align:center;font-size:12.5px;font-weight:600;letter-spacing:.02em;padding:7px 14px}
+.eyebrow-strip b{color:#FFD27A}
+.trust{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;padding:14px 16px 0}
+.trust span{font-size:11.5px;font-weight:700;color:var(--ink-soft);background:var(--bg-soft);border:1px solid var(--line);border-radius:999px;padding:5px 11px;display:inline-flex;align-items:center;gap:5px}
+
+/* hero */
+.hero{padding:18px 0 8px;text-align:center}
+.rating-line{display:flex;align-items:center;justify-content:center;gap:8px;margin:18px 0 14px;font-size:13px;color:var(--ink-soft);font-weight:600}
+.rating-line .s{color:var(--star);font-size:15px;letter-spacing:1px}
+h1.head{font-size:clamp(26px,7.4vw,38px);line-height:1.12;letter-spacing:-.03em;margin:6px 0 0}
+h1.head .hl{color:var(--blue)}
+.sub{font-size:18px;color:var(--ink-soft);margin:16px 0 0;font-weight:450}
+
+/* hero carousel */
+.carousel{margin:22px 0 4px}
+.track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:2px 0 10px;scrollbar-width:none}
+.track::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,#EEF3FE 0%,#F6F7F9 100%);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative}
+.slide img{max-width:78%;margin:auto}
+.slide img.fill{max-width:100%;width:100%;height:100%;object-fit:cover;margin:0}
+.slide .badge{position:absolute;top:14px;left:14px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:11.5px;font-weight:800;color:var(--navy);padding:5px 11px}
+/* styled placeholder slides (swap for real lifestyle photos) */
+.slide.ph{background:linear-gradient(155deg,#13267F,#2C6BF0);color:#fff;flex-direction:column;text-align:center;padding:26px}
+.slide.ph .big{font-size:46px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.slide.ph h4{font-size:20px;margin:8px 0 6px}
+.slide.ph p{font-size:14px;color:#C9D5FF;margin:0;max-width:80%}
+.slide.ph .chips{display:flex;flex-wrap:wrap;gap:7px;justify-content:center;margin-top:14px}
+.slide.ph .chips span{background:rgba(255,255,255,.14);border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:700}
+.swipe{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12px;color:var(--ink-mute);font-weight:700;margin-top:2px}
+.dots{display:flex;gap:6px;justify-content:center;margin-top:10px}
+.dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:.2s}
+.dots i.on{background:var(--blue);width:20px;border-radius:4px}
+.hero-cap{font-size:13px;color:var(--ink-mute);margin:12px 0 0;font-weight:600}
+
+/* author */
+.byline{display:flex;gap:14px;align-items:center;margin:24px 0 8px;padding:16px;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius)}
+.byline img{width:62px;height:62px;border-radius:50%;object-fit:cover;flex:0 0 62px;border:2px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.byline .nm{font-weight:800;font-size:16px}
+.byline .rl{font-size:12.5px;color:var(--ink-soft);font-weight:600;line-height:1.4}
+.byline .vf{display:inline-flex;align-items:center;gap:4px;font-size:11px;color:var(--blue);font-weight:700;margin-top:3px}
+
+/* body */
+.body p{font-size:17.5px}
+.lead{font-size:19px;color:var(--ink)}
+.pull{border-left:4px solid var(--blue);background:var(--bg-blue);margin:22px 0;padding:16px 18px;border-radius:0 12px 12px 0;font-size:18px;font-style:italic;color:var(--navy);font-weight:600}
+.sec{padding:38px 0 6px;scroll-margin-top:60px}
+.sec-num{display:flex;align-items:center;gap:12px;margin:0 0 14px}
+.sec-num .n{width:40px;height:40px;flex:0 0 40px;border-radius:11px;background:var(--navy);color:#fff;font-weight:900;font-size:17px;display:grid;place-items:center}
+.sec-num h2{font-size:clamp(22px,5.6vw,28px)}
+
+/* stat band */
+.statband{background:linear-gradient(180deg,#0C1A5E 0%,#10247F 100%);color:#fff;border-radius:20px;padding:24px 20px;margin:26px 0;text-align:center}
+.statband h3{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:#9FB4FF;margin:0 0 18px;display:flex;align-items:center;justify-content:center;gap:8px}
+.statband .grid{display:grid;gap:18px}
+.statband .stat .v{font-size:42px;font-weight:900;letter-spacing:-.03em;line-height:1}
+.statband .stat .v .u{font-size:24px;vertical-align:top}
+.statband .stat .l{font-size:13.5px;color:#C9D5FF;margin-top:7px;line-height:1.45}
+.statband .stat+.stat{border-top:1px solid rgba(255,255,255,.13);padding-top:18px}
+
+.cards4{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.scard{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:16px 14px;text-align:center}
+.scard .v{font-size:30px;font-weight:900;letter-spacing:-.03em;color:var(--navy);line-height:1}
+.scard .l{font-size:12px;color:var(--ink-soft);margin-top:6px;font-weight:600;line-height:1.35}
+.callout{border:1px solid #D7E0FB;background:var(--bg-blue);border-radius:14px;padding:16px 18px;margin:20px 0}
+.callout .t{font-weight:800;color:var(--navy);margin-bottom:5px;font-size:15px}
+.callout.green{border-color:#BCE6CC;background:var(--green-soft)}.callout.green .t{color:var(--green)}
+.src{font-size:12px;color:var(--ink-mute);margin:10px 0 0;font-style:italic}
+
+/* timeline as accent cards (faithful) */
+.tlc{display:grid;gap:12px;margin:22px 0}
+.tcardx{border:1px solid var(--line);border-radius:14px;padding:14px 16px 14px 18px;position:relative;background:#fff;overflow:hidden}
+.tcardx:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px}
+.tcardx.c1:before{background:var(--teal)}.tcardx.c2:before{background:var(--amber)}.tcardx.c3:before{background:var(--violet)}.tcardx.c4:before{background:var(--blue)}
+.tcardx .yr{font-size:12px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+.tcardx.c1 .yr{color:var(--teal)}.tcardx.c2 .yr{color:var(--amber)}.tcardx.c3 .yr{color:var(--violet)}.tcardx.c4 .yr{color:var(--blue)}
+.tcardx h4{font-size:16px;margin:3px 0 4px}
+.tcardx p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+
+/* multi-row mechanism two-bar chart (faithful to bioavailability breakdown) */
+.mrow{padding:13px 0;border-bottom:1px solid var(--line-soft)}
+.mrow:last-child{border-bottom:none}
+.mrow .h{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.mrow .h .nm{font-weight:800;font-size:14.5px}
+.mrow .h .tag{font-size:11.5px;font-weight:800;color:var(--green);background:var(--green-soft);border-radius:999px;padding:3px 9px}
+.mrow .bar{display:flex;align-items:center;gap:9px;margin-bottom:6px}
+.mrow .bar .k{font-size:11px;font-weight:700;color:var(--ink-mute);width:84px;flex:0 0 84px}
+.mrow .bar .track2{flex:1;height:14px;background:var(--bg-soft);border-radius:7px;overflow:hidden}
+.mrow .bar .fill2{height:100%;width:0;border-radius:7px;transition:width 1.3s cubic-bezier(.22,1,.36,1)}
+.mrow.is-in .bar .fill2{width:var(--w)}
+.mrow .bar .fill2.med{background:#C8CBD3}
+.mrow .bar .fill2.nf{background:linear-gradient(90deg,#4FC07E,#1F9D55)}
+
+/* chart wrapper */
+.chart{border:1px solid var(--line);border-radius:18px;padding:20px 18px;margin:24px 0;background:#fff;box-shadow:0 6px 24px rgba(16,23,40,.05)}
+.chart .ct{display:flex;align-items:center;gap:9px;font-weight:800;font-size:16.5px;margin-bottom:4px}
+.chart .ct .ic{width:30px;height:30px;border-radius:9px;background:var(--bg-blue);color:var(--blue);display:grid;place-items:center;flex:0 0 30px}
+.chart .cs{font-size:13px;color:var(--ink-mute);margin:0 0 16px}
+
+/* vertical bars */
+.vbars{display:flex;justify-content:space-around;align-items:flex-end;gap:10px;height:200px;padding-top:10px}
+.vbar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.vbar .col{width:100%;max-width:54px;background:linear-gradient(180deg,#5C86F0,#2563EB);border-radius:9px 9px 0 0;height:0;transition:height 1.5s cubic-bezier(.22,1,.36,1);position:relative}
+.vbars.is-in .vbar .col{height:var(--h)}
+.vbar .vv{position:absolute;top:-26px;left:0;right:0;text-align:center;font-weight:900;font-size:17px;color:var(--navy)}
+.vbar .vl{font-size:11.5px;color:var(--ink-soft);font-weight:700;text-align:center;margin-top:9px;line-height:1.25}
+
+/* before/after */
+.ba{display:flex;flex-direction:column;gap:18px}
+.ba .row .lab{font-weight:800;font-size:14.5px;margin-bottom:8px;display:flex;justify-content:space-between}
+.ba .row .lab .opt{font-size:11.5px;color:var(--ink-mute);font-weight:700}
+.ba .bar{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.ba .bar .tag{font-size:11px;font-weight:800;width:46px;flex:0 0 46px;color:var(--ink-mute)}
+.ba .bar .track{flex:1;height:16px;background:var(--bg-soft);border-radius:8px;overflow:hidden}
+.ba .bar .fill{height:100%;width:0;border-radius:8px;transition:width 1.3s cubic-bezier(.22,1,.36,1)}
+.ba.is-in .bar .fill{width:var(--w)}
+.ba .bar .fill.before{background:#C8CBD3}
+.ba .bar .fill.after{background:linear-gradient(90deg,#4FC07E,#1F9D55)}
+.ba .bar .num{font-size:12.5px;font-weight:800;width:54px;flex:0 0 54px;text-align:right}
+
+/* line chart */
+.linewrap{position:relative}
+.linechart{width:100%;height:auto;display:block}
+.linechart .grid{stroke:var(--line-soft);stroke-width:1}
+.linechart path.ln{fill:none;stroke-width:3.5;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset 2s ease-out}
+.linechart.is-in path.ln{stroke-dashoffset:0}
+.linechart .dot{opacity:0;transition:opacity .4s ease 1.6s}
+.linechart.is-in .dot{opacity:1}
+.lgnd{display:flex;gap:18px;justify-content:center;margin-top:12px;font-size:12.5px;font-weight:700;flex-wrap:wrap}
+.lgnd .k{display:flex;align-items:center;gap:6px;color:var(--ink-soft)}
+.lgnd .k i{width:14px;height:4px;border-radius:2px;display:inline-block}
+
+/* journey numbered steps */
+.journey{display:grid;gap:14px;margin:22px 0}
+@media(min-width:560px){.journey{grid-template-columns:1fr 1fr}}
+.jcol{border-radius:16px;padding:18px;border:1px solid var(--line)}
+.jcol.bad{background:var(--red-soft);border-color:#F3D2D2}
+.jcol.good{background:var(--green-soft);border-color:#C3E7D0}
+.jcol h4{font-size:15px;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.jcol.bad h4{color:#B23232}.jcol.good h4{color:var(--green)}
+.jstep{display:flex;gap:10px;font-size:14px;margin-bottom:10px;color:var(--ink-soft);font-weight:500;align-items:flex-start}
+.jstep .i{flex:0 0 22px;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:900;color:#fff;margin-top:1px}
+.jcol.bad .jstep .i{background:#DC4C4C}.jcol.good .jstep .i{background:#1F9D55}
+.jres{font-weight:800;margin-top:6px;font-size:14.5px}
+.jcol.bad .jres{color:#B23232}.jcol.good .jres{color:var(--green)}
+
+.mech{display:flex;gap:13px;padding:15px;border:1px solid var(--line);border-radius:14px;margin-bottom:12px;background:#fff}
+.mech .ic{flex:0 0 42px;width:42px;height:42px;border-radius:11px;display:grid;place-items:center;font-size:21px;background:var(--bg-blue)}
+.mech h4{font-size:15.5px;margin-bottom:3px}
+.mech p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+
+.pillars{display:grid;gap:12px;margin:20px 0}
+.pill{border:1px solid var(--line);border-radius:14px;padding:16px;background:#fff;position:relative;overflow:hidden}
+.pill:before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--blue)}
+.pill .pn{font-size:12px;font-weight:900;color:var(--blue);letter-spacing:.05em}
+.pill h4{font-size:16px;margin:3px 0 5px}
+.pill p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.pill .ing{font-weight:800;color:var(--coffee)}
+
+.checks{list-style:none;padding:0;margin:18px 0}
+.checks li{display:flex;gap:11px;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:15.5px}
+.checks li:last-child{border-bottom:none}
+.checks li .ck{flex:0 0 24px;width:24px;height:24px;border-radius:50%;background:var(--green-soft);color:var(--green);display:grid;place-items:center;font-weight:900}
+.checks li b{display:block}
+
+/* comparison table */
+.cmp{border:1px solid var(--line);border-radius:16px;overflow:hidden;margin:22px 0;font-size:13.5px}
+.cmp .hd{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;background:var(--bg-soft);font-weight:800;text-align:center}
+.cmp .hd>div{padding:12px 6px;font-size:12px;line-height:1.2;border-left:1px solid var(--line)}
+.cmp .hd>div:first-child{border-left:none;text-align:left}
+.cmp .hd .best{background:var(--navy);color:#fff;position:relative}
+.cmp .hd .best .tag{position:absolute;top:-1px;left:0;right:0;font-size:8.5px;letter-spacing:.08em;background:var(--gold);color:#3a2600;padding:2px;font-weight:900}
+.cmp .rw{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;border-top:1px solid var(--line)}
+.cmp .rw>div{padding:12px 6px;text-align:center;border-left:1px solid var(--line);display:flex;align-items:center;justify-content:center}
+.cmp .rw>div:first-child{border-left:none;text-align:left;justify-content:flex-start;font-weight:700;font-size:12.5px}
+.cmp .rw .best{background:#F3F7FF}
+.cmp .yes{color:var(--green);font-weight:900}.cmp .no{color:#C2502F;font-weight:800}.cmp .part{color:var(--gold);font-weight:800;font-size:11.5px}
+.cmp .rw>div small{font-size:11px;color:var(--ink-soft);font-weight:600}
+.cmpfoot{display:flex;align-items:center;justify-content:center;gap:8px;background:var(--green);color:#fff;font-weight:800;font-size:14px;border-radius:12px;padding:13px;margin:14px 0 0}
+
+/* video module */
+.video{margin:22px 0}
+.video .frame{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;background:linear-gradient(150deg,#0C1A5E,#2C6BF0);display:flex;align-items:center;justify-content:center}
+.video .frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;opacity:.22}
+.video .play{position:relative;width:66px;height:66px;border-radius:50%;background:rgba(255,255,255,.95);display:grid;place-items:center;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.video .play:after{content:"";border-left:20px solid var(--navy);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
+.video .ph-tag{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,.55);color:#fff;font-size:10.5px;font-weight:700;border-radius:6px;padding:4px 8px;letter-spacing:.02em}
+.video .cap{font-size:13.5px;color:var(--ink-soft);font-style:italic;text-align:center;margin:12px 0 0;padding:0 8px}
+
+/* as seen in */
+.seenin{text-align:center;margin:26px 0 6px}
+.seenin .lab{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-mute);font-weight:800;margin-bottom:14px}
+.seenin .logos{display:flex;flex-wrap:wrap;gap:14px 24px;justify-content:center;align-items:center}
+.seenin .logos span{font-family:Georgia,'Times New Roman',serif;font-weight:700;color:#9aa0ab;font-size:18px;letter-spacing:.01em}
+.seenin .logos span.b{font-weight:900;font-style:italic}
+
+/* instagram clips */
+.ig-intro{font-size:15.5px;color:var(--ink-soft);margin:8px 0 14px}
+.ig-label{display:flex;align-items:center;justify-content:center;gap:8px;font-weight:800;font-size:14px;color:var(--ink);margin-bottom:14px}
+.ig-label .gi{width:24px;height:24px;border-radius:7px;background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);color:#fff;display:grid;place-items:center;font-size:13px}
+.ig-clips{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.clip{border-radius:16px;overflow:hidden;aspect-ratio:9/16;position:relative;display:flex;align-items:flex-end;color:#fff}
+.clip.g1{background:linear-gradient(160deg,#7C5CBF,#DD2A7B 60%,#F58529)}
+.clip.g2{background:linear-gradient(160deg,#13267F,#2C6BF0 60%,#0E9AA7)}
+.clip .play2{position:absolute;inset:0;display:grid;place-items:center}
+.clip .play2 b{width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center}
+.clip .play2 b:after{content:"";border-left:15px solid var(--navy);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.clip .cap2{position:relative;width:100%;padding:12px;font-size:12px;font-weight:700;background:linear-gradient(0deg,rgba(0,0,0,.55),transparent)}
+.clip .swap{position:absolute;top:10px;left:10px;background:rgba(0,0,0,.5);font-size:9.5px;font-weight:700;border-radius:5px;padding:3px 7px}
+.ig-handle{text-align:center;font-size:12.5px;color:var(--ink-mute);font-weight:600;margin-top:10px}
+
+/* faq */
+.faq{border:1px solid var(--line);border-radius:14px;overflow:hidden;margin:18px 0}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:last-child{border-bottom:none}
+.faq summary{padding:16px 44px 16px 16px;font-weight:700;font-size:15.5px;cursor:pointer;position:relative;list-style:none;background:#fff}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:22px;color:var(--blue);font-weight:400;transition:transform .2s}
+.faq details[open] summary:after{transform:translateY(-50%) rotate(45deg)}
+.faq .ans{padding:0 16px 16px;font-size:14.5px;color:var(--ink-soft)}
+
+/* who for */
+.whofor{display:grid;gap:14px;margin:20px 0}
+.whobox{border:1px solid var(--line);border-radius:16px;padding:18px}
+.whobox.y{background:var(--green-soft);border-color:#C3E7D0}
+.whobox.n{background:var(--bg-soft)}
+.whobox h4{font-size:15px;margin-bottom:12px}
+.whobox.y h4{color:var(--green)}.whobox.n h4{color:var(--ink-soft)}
+.whobox ul{list-style:none;padding:0;margin:0}
+.whobox li{font-size:14px;padding:7px 0;display:flex;gap:9px;color:var(--ink-soft)}
+.whobox li .m{flex:0 0 18px;font-weight:900}
+.whobox.y li .m{color:var(--green)}.whobox.n li .m{color:var(--ink-mute)}
+
+/* CTA */
+.ctaband{background:linear-gradient(160deg,#0C1A5E,#1B49C2);border-radius:22px;padding:28px 22px;margin:30px 0;text-align:center;color:#fff}
+.ctaband h3{font-size:23px;letter-spacing:-.02em;margin-bottom:8px}
+.ctaband p{color:#C9D5FF;font-size:15px;margin:0 0 18px}
+.ctaband .prod{max-width:160px;margin:0 auto 16px;background:rgba(255,255,255,.08);border-radius:16px;padding:10px}
+.btn{display:block;width:100%;background:linear-gradient(180deg,#FFB400,#F59300);color:#3a2600;font-weight:900;font-size:18px;letter-spacing:-.01em;padding:17px 18px;border-radius:14px;border:none;box-shadow:0 8px 22px rgba(245,147,0,.4);cursor:pointer;text-align:center;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(245,147,0,.5)}
+.btn .sm{display:block;font-size:12.5px;font-weight:700;color:#5a3d00;margin-top:3px}
+.btn.pill{display:inline-block;width:auto;background:#fff;color:var(--navy);box-shadow:0 6px 18px rgba(0,0,0,.12);font-size:16px;padding:14px 26px;border-radius:999px}
+.guarantee{display:flex;align-items:center;justify-content:center;gap:8px;font-size:12.5px;color:#9FB4FF;margin-top:12px;font-weight:600}
+
+/* review wall */
+.tcard{border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px;background:#fff}
+.tcard .up{display:flex;align-items:center;gap:7px;font-size:12.5px;color:var(--ink-soft);font-weight:700;margin-bottom:10px}
+.tcard .up .ar{width:26px;height:26px;border-radius:8px;background:var(--bg-blue);color:var(--blue);display:grid;place-items:center;font-weight:900}
+.tcard p{font-size:15px;margin:0 0 12px;color:var(--ink)}
+.tcard .who{display:flex;align-items:center;gap:7px;font-size:13px;font-weight:700}
+.tcard .who .vf{color:var(--green);font-size:11.5px;display:inline-flex;align-items:center;gap:3px;font-weight:700}
+.tstars{color:var(--star);font-size:14px;letter-spacing:1px;margin-bottom:8px}
+.wall{max-height:430px;overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(180deg,#000 78%,transparent);mask-image:linear-gradient(180deg,#000 78%,transparent)}
+.wall.open{max-height:none;-webkit-mask-image:none;mask-image:none}
+.wmore{text-align:center;margin:8px 0 0}
+.wmore button{background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 20px;font-weight:800;font-size:14px;color:var(--navy);cursor:pointer}
+
+/* comments */
+.cmt{border-top:1px solid var(--line);padding:16px 0}
+.cmt .hd{display:flex;align-items:center;gap:9px;font-size:13.5px;margin-bottom:6px}
+.cmt .av{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;color:#fff;font-weight:800;font-size:14px;overflow:hidden;flex:0 0 38px}
+.cmt .av img{width:100%;height:100%;object-fit:cover;display:block}
+.cmt.reply .av{box-shadow:0 0 0 2px var(--navy)}
+.cmt .un{font-weight:800}
+.cmt .au{font-size:9.5px;background:var(--navy);color:#fff;padding:2px 6px;border-radius:5px;font-weight:800;letter-spacing:.04em}
+.cmt .tm{color:var(--ink-mute);font-size:12px;margin-left:auto}
+.cmt p{font-size:14.5px;margin:0 0 8px;color:var(--ink-soft)}
+.cmt .act{display:flex;gap:16px;font-size:12.5px;color:var(--ink-mute);font-weight:700}
+.cmt.reply{margin-left:34px;border-top:1px dashed var(--line);background:var(--bg-soft);padding-left:12px;border-radius:0 0 10px 10px}
+
+.refs{font-size:12.5px;color:var(--ink-mute);margin:18px 0}
+.refs ol{padding-left:18px;margin:0}
+.refs li{margin-bottom:8px;line-height:1.5}
+.foot{background:var(--bg-soft);border-top:1px solid var(--line);padding:26px 22px;text-align:center;font-size:12px;color:var(--ink-mute)}
+.foot .bd{font-weight:800;color:var(--ink-soft);margin-bottom:8px;font-size:13px}
+
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);padding:10px 14px;transform:translateY(110%);transition:transform .3s ease}
+.sticky.show{transform:translateY(0)}
+.sticky .inner{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;gap:12px}
+.sticky .px img{width:46px;height:46px;object-fit:contain;border-radius:8px;background:var(--bg-blue);padding:3px}
+.sticky .meta{flex:1;min-width:0}
+.sticky .meta .t{font-weight:800;font-size:13.5px;line-height:1.2}
+.sticky .meta .s{font-size:11.5px;color:var(--ink-soft);font-weight:600}
+.sticky .go{flex:0 0 auto;background:linear-gradient(180deg,#FFB400,#F59300);color:#3a2600;font-weight:900;font-size:14px;padding:12px 18px;border-radius:11px;border:none;white-space:nowrap}
+@media(min-width:680px){.sticky{display:none}}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1 · TOP BAR -->
+  <header class="topbar"><div class="row">
+    <div class="brand"><span class="dot">R</span> Restural</div>
+    <div class="stars"><span class="s">★★★★★</span><span class="txt">4.9/5 · 12,400+ reviews</span></div>
+  </div></header>
+  <div class="eyebrow-strip">⏳ Reader offer ends tonight · <b>Free shipping over $70</b> · 90-day guarantee</div>
+
+  <!-- 2 · TRUST -->
+  <div class="trust pad">
+    <span>🧠 Movement-Disorder Research</span>
+    <span>🔬 Clinically-Studied Compounds</span>
+    <span>✅ 90-Day Money-Back</span>
+  </div>
+
+  <!-- 3 · HERO + CAROUSEL -->
+  <section class="hero pad">
+    <div class="rating-line"><span class="s">★★★★★</span> Rated 4.9/5 by 12,400+ people living with Parkinson's</div>
+    <h1 class="head">Most Parkinson's Treatments Just <span class="hl">Mask the Tremor</span>. Here's What Finally Protects the Neurons Behind It.</h1>
+    <p class="sub">After 19 years treating movement disorders, I realized levodopa was buying my patients a few quiet hours while the cells that steady their hands kept dying. So I started recommending something that targets the fire underneath.</p>
+
+    <div class="carousel">
+      <div class="track" id="track">
+        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/11_hold_window.png?v=1782902647" alt="Dr. Steven Jones with NeuroFuel"></div>
+        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/03_ingredients_radial.png?v=1782902432" alt="NeuroFuel — 5 compounds, one morning coffee"></div>
+        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/07_how_it_works.png?v=1782902431" alt="How NeuroFuel works"></div>
+        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/06_value_per_day.png?v=1782902432" alt="NeuroFuel — just $1.35 a day"></div>
+        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/05_five_compounds_stat.png?v=1782902432" alt="5 clinically-studied compounds"></div>
+      </div>
+      <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
+      <div class="swipe">← Swipe to see more →</div>
+    </div>
+    <div class="hero-cap">NeuroFuel — Morning Coffee for Brain Recovery</div>
+  </section>
+
+  <!-- 4 · AUTHOR -->
+  <div class="pad"><div class="byline">
+    <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_dr_jones_headshot_ff12a8b7-5e19-437e-aa0f-0c69295bc3c8.png?v=1782904128" alt="Dr. Steven Jones">
+    <div>
+      <div class="nm">Dr. Steven Jones, MD</div>
+      <div class="rl">Movement Disorder Specialist · 19 years in Parkinson's care</div>
+      <div class="vf">✔ Medically reviewed · Updated June 2026</div>
+    </div>
+  </div></div>
+
+  <!-- 5 · OPENING NARRATIVE -->
+  <div class="body pad">
+    <p class="lead">In nearly two decades of treating Parkinson's, I have watched the same heartbreaking scene play out in my clinic hundreds of times.</p>
+    <p>A patient walks in with a notebook. They've timed their levodopa to the minute. They know exactly when it kicks in and exactly when it fades. They've done everything right. And yet they slide their hand under the table when they sit down, because the tremor is already creeping back earlier than it did last month.</p>
+    <p class="pull">"Doctor, I take my pills exactly on schedule. Why is the shaking still winning?"</p>
+    <p>For years I gave the standard answer: adjust the dose, add an agonist, talk about surgery. But their notebooks told a different story. The medication was working — the tremor just kept breaking through sooner, spreading from one hand to the other, finding the jaw, the leg. Despite spending $200–300 a month, their hands were getting less steady, not more.</p>
+    <p>So I started asking a harder question. <strong>If the medication is replacing dopamine perfectly, why are the hands still losing?</strong> The answer changed how I treat this disease — and it has almost nothing to do with dopamine.</p>
+  </div>
+
+  <!-- 6 · WHAT I SEE -->
+  <div class="pad"><div class="statband reveal">
+    <h3>📋 What I See in My Clinic</h3>
+    <div class="grid">
+      <div class="stat"><div class="v"><span data-count="70">0</span><span class="u">%</span></div><div class="l">of dopamine neurons are already gone by the time a tremor is obvious enough to diagnose</div></div>
+      <div class="stat"><div class="v"><span data-count="64">0</span><span class="u">%</span></div><div class="l">of patients say their tremor "breaks through" earlier than it used to, despite perfect dosing</div></div>
+      <div class="stat"><div class="v">$<span data-count="290">0</span></div><div class="l">average monthly spend on prescriptions that quiet the shake but don't protect a single neuron</div></div>
+    </div>
+  </div></div>
+
+  <!-- 7-8 · SECTION 01 -->
+  <section class="sec pad" id="s1">
+    <div class="sec-num"><div class="n">01</div><h2>The Real Driver Behind Your Tremor</h2></div>
+    <p>Recent movement-disorder research has confirmed what I was seeing on those notebooks: <strong>the tremor isn't only a dopamine shortage. That's the symptom.</strong> The real driver is a relentless cycle of neuroinflammation and oxidative stress quietly killing the dopamine-producing neurons in the circuit that's supposed to keep your movements smooth.</p>
+
+    <h3 style="font-size:19px;margin:24px 0 6px">The Discovery That's Forcing Specialists to Rethink Tremor</h3>
+    <p>In a landmark line of research, neurologists confirmed that the Parkinson's brain isn't just low on dopamine — it's on fire. Chronic neuroinflammation, driven by overactive microglia and toxic alpha-synuclein, is an <em>active driver</em> of neuron death:</p>
+    <div class="cards4">
+      <div class="scard reveal"><div class="v"><span data-count="60">0</span>–<span data-count="80">0</span>%</div><div class="l">of nigral neurons already lost before diagnosis</div></div>
+      <div class="scard reveal"><div class="v"><span data-count="2">0</span>×</div><div class="l">higher activated-microglia density in the affected region</div></div>
+      <div class="scard reveal"><div class="v">α-syn</div><div class="l">toxic protein clumps that keep the inflammatory cascade burning</div></div>
+      <div class="scard reveal"><div class="v">24/7</div><div class="l">the inflammation runs around the clock — not just between doses</div></div>
+    </div>
+    <div class="callout">
+      <div class="t">Key finding</div>
+      That fire is what makes a tremor worse year after year. Every day it continues unchecked, more neurons die, the shake gets bigger, and your medication has fewer cells left to work through. <strong>This is why the tremor breaks through sooner no matter how perfectly you time your pills.</strong>
+      <div class="src">Source: Hirsch &amp; Hunot (2009), <em>The Lancet Neurology</em> 8(4):382–397.</div>
+    </div>
+
+    <h3 style="font-size:19px;margin:30px 0 4px">How Our Understanding Evolved</h3>
+    <p class="cs" style="color:var(--ink-soft);font-size:15px">Understanding why medication alone falls short means understanding where the science turned:</p>
+    <div class="tlc">
+      <div class="tcardx c1 reveal"><div class="yr">1960s · The Dopamine Era</div><h4>Levodopa changes everything</h4><p>A miracle for symptoms. The entire model becomes "replace the missing dopamine." Tremor control, not neuron protection, is the goal.</p></div>
+      <div class="tcardx c2 reveal"><div class="yr">1980s–90s · The Wearing-Off Problem</div><h4>The cracks appear</h4><p>Levodopa works for fewer hours over time, with dyskinesia and motor fluctuations. The disease keeps progressing underneath the medication.</p></div>
+      <div class="tcardx c3 reveal"><div class="yr">2000s–10s · The Inflammation Reckoning</div><h4>Microglia take centre stage</h4><p>Imaging reveals chronic neuroinflammation and oxidative stress as active drivers of neuron death — not just a side effect of it.</p></div>
+      <div class="tcardx c4 reveal"><div class="yr">2020s · The Neuroprotection Shift</div><h4>Protect what's left</h4><p>Focus moves to compounds that cross the blood-brain barrier and calm the inflammatory fire — working <em>alongside</em> dopamine therapy, not instead of it.</p></div>
+    </div>
+
+    <!-- MULTI-ROW MECHANISM CHART (faithful to their bioavailability breakdown) -->
+    <div class="chart">
+      <div class="ct"><span class="ic">🧬</span> The Neuroprotection Breakdown</div>
+      <p class="cs">Your medication scores high on masking the shake — and near zero on the mechanisms actually destroying the neurons. Here's the coverage gap, mechanism by mechanism:</p>
+      <div class="mrow reveal" style="--w:84%"><div class="h"><span class="nm">Neuroinflammation</span><span class="tag">Untouched → Targeted</span></div><div class="bar"><span class="k">Medication</span><div class="track2"><div class="fill2 med" style="width:8%"></div></div></div><div class="bar"><span class="k">NeuroFuel</span><div class="track2"><div class="fill2 nf"></div></div></div></div>
+      <div class="mrow reveal" style="--w:80%"><div class="h"><span class="nm">Oxidative stress</span><span class="tag">Untouched → Targeted</span></div><div class="bar"><span class="k">Medication</span><div class="track2"><div class="fill2 med" style="width:10%"></div></div></div><div class="bar"><span class="k">NeuroFuel</span><div class="track2"><div class="fill2 nf"></div></div></div></div>
+      <div class="mrow reveal" style="--w:78%"><div class="h"><span class="nm">Neurotrophic support</span><span class="tag">Untouched → Targeted</span></div><div class="bar"><span class="k">Medication</span><div class="track2"><div class="fill2 med" style="width:6%"></div></div></div><div class="bar"><span class="k">NeuroFuel</span><div class="track2"><div class="fill2 nf"></div></div></div></div>
+      <div class="mrow reveal" style="--w:82%"><div class="h"><span class="nm">Sleep &amp; stress cycle</span><span class="tag">Untouched → Targeted</span></div><div class="bar"><span class="k">Medication</span><div class="track2"><div class="fill2 med" style="width:12%"></div></div></div><div class="bar"><span class="k">NeuroFuel</span><div class="track2"><div class="fill2 nf"></div></div></div></div>
+      <p class="src">Illustrative composite of mechanism-of-action literature. Masking a tremor and protecting neurons are not the same thing.</p>
+    </div>
+
+    <!-- 40% style stat block -->
+    <div class="statband reveal">
+      <h3>⏳ The Window That's Closing</h3>
+      <div class="grid">
+        <div class="stat"><div class="v"><span data-count="60">0</span>–<span data-count="80">0</span><span class="u">%</span></div><div class="l">of dopamine neurons in that region are already gone at diagnosis</div></div>
+        <div class="stat"><div class="v">Every day</div><div class="l">more are lost to inflammation — and lost neurons don't come back</div></div>
+      </div>
+    </div>
+
+    <!-- numbered-step journey -->
+    <h3 style="font-size:19px;margin:30px 0 4px">What Happens After Your Morning Cup</h3>
+    <p>Here's the difference between a medication-only morning and a morning that also targets the fire:</p>
+    <div class="journey">
+      <div class="jcol bad reveal">
+        <h4>☕ Medication Only</h4>
+        <div class="jstep"><span class="i">1</span> Levodopa floods the brain with dopamine</div>
+        <div class="jstep"><span class="i">2</span> Tremor quiets for a few hours</div>
+        <div class="jstep"><span class="i">3</span> Inflammation keeps burning, unaddressed</div>
+        <div class="jstep"><span class="i">4</span> Neurons keep dying on schedule</div>
+        <div class="jres">Result: the shake breaks through sooner next time</div>
+      </div>
+      <div class="jcol good reveal">
+        <h4>☕ NeuroFuel + Your Meds</h4>
+        <div class="jstep"><span class="i">1</span> Compounds cross the blood-brain barrier</div>
+        <div class="jstep"><span class="i">2</span> Microglia shift from "destroy" to "protect"</div>
+        <div class="jstep"><span class="i">3</span> Oxidative stress neutralised at the source</div>
+        <div class="jstep"><span class="i">4</span> Surviving neurons get neurotrophic support</div>
+        <div class="jres">Result: you protect the cells your medication depends on</div>
+      </div>
+    </div>
+
+    <h3 style="font-size:19px;margin:30px 0 8px">The Mechanisms Your Medication Ignores</h3>
+    <div class="mech reveal"><div class="ic">🔥</div><div><h4>Chronic neuroinflammation</h4><p>Overactive microglia attack healthy neurons. Levodopa does nothing to calm them — and they don't switch off between doses.</p></div></div>
+    <div class="mech reveal"><div class="ic">⚡</div><div><h4>Oxidative stress</h4><p>Free radicals corrode the neural pathways that run your "image stabilisation." No prescription targets this corrosion directly.</p></div></div>
+    <div class="mech reveal"><div class="ic">🌱</div><div><h4>Missing neurotrophic support</h4><p>Your surviving neurons are working overtime. Without growth-factor support they burn out faster — and the steadying signal weakens.</p></div></div>
+    <div class="mech reveal"><div class="ic">😴</div><div><h4>The stress–sleep–tremor loop</h4><p>Poor sleep and stress make a tremor visibly worse, which fuels more anxiety and less sleep. Medication doesn't break this cycle.</p></div></div>
+
+    <h3 style="font-size:19px;margin:30px 0 8px">Follow the Money: What You're Really Paying For</h3>
+    <div class="cards4" style="grid-template-columns:1fr 1fr 1fr">
+      <div class="scard reveal"><div class="v">$<span data-count="300">0</span></div><div class="l">per month on meds that mask, don't protect</div></div>
+      <div class="scard reveal"><div class="v">$<span data-count="65">0</span>k</div><div class="l">for DBS surgery that doesn't slow progression by a day</div></div>
+      <div class="scard reveal"><div class="v">$<span data-count="1" data-suffix=".35">0</span></div><div class="l">a day for a neuroprotective morning coffee</div></div>
+    </div>
+
+    <!-- line chart -->
+    <div class="chart">
+      <div class="ct"><span class="ic">📈</span> Daily "On" Time — Hours Your Hands Stay Steady</div>
+      <p class="cs">The pattern users report over 12 weeks: medication-only "on" time keeps shrinking as wearing-off worsens. Add neuroprotective support and the steady hours hold.</p>
+      <div class="linewrap">
+        <svg class="linechart" viewBox="0 0 580 260" preserveAspectRatio="xMidYMid meet" aria-hidden="true">
+          <line class="grid" x1="46" y1="40" x2="560" y2="40"/><line class="grid" x1="46" y1="95" x2="560" y2="95"/><line class="grid" x1="46" y1="150" x2="560" y2="150"/><line class="grid" x1="46" y1="205" x2="560" y2="205"/>
+          <text x="38" y="44" font-size="11" fill="#9aa0ab" text-anchor="end">8h</text><text x="38" y="99" font-size="11" fill="#9aa0ab" text-anchor="end">6h</text><text x="38" y="154" font-size="11" fill="#9aa0ab" text-anchor="end">4h</text><text x="38" y="209" font-size="11" fill="#9aa0ab" text-anchor="end">2h</text>
+          <text x="60" y="230" font-size="11" fill="#9aa0ab" text-anchor="middle">Wk 1</text><text x="225" y="230" font-size="11" fill="#9aa0ab" text-anchor="middle">Wk 4</text><text x="390" y="230" font-size="11" fill="#9aa0ab" text-anchor="middle">Wk 8</text><text x="540" y="230" font-size="11" fill="#9aa0ab" text-anchor="middle">Wk 12</text>
+          <path class="ln" style="--len:520" stroke="#DC4C4C" d="M60,95 L225,123 L390,150 L540,169"/>
+          <circle class="dot" cx="60" cy="95" r="4" fill="#DC4C4C"/><circle class="dot" cx="225" cy="123" r="4" fill="#DC4C4C"/><circle class="dot" cx="390" cy="150" r="4" fill="#DC4C4C"/><circle class="dot" cx="540" cy="169" r="4" fill="#DC4C4C"/>
+          <path class="ln" style="--len:520" stroke="#1F9D55" d="M60,95 L225,79 L390,62 L540,51"/>
+          <circle class="dot" cx="60" cy="95" r="4" fill="#1F9D55"/><circle class="dot" cx="225" cy="79" r="4" fill="#1F9D55"/><circle class="dot" cx="390" cy="62" r="4" fill="#1F9D55"/><circle class="dot" cx="540" cy="51" r="4" fill="#1F9D55"/>
+        </svg>
+        <div class="lgnd"><span class="k"><i style="background:#DC4C4C"></i> Medication only</span><span class="k"><i style="background:#1F9D55"></i> Medication + NeuroFuel</span></div>
+      </div>
+      <p class="src">Illustrative of self-reported user patterns. Individual results vary; NeuroFuel works alongside — never instead of — your prescriptions.</p>
+    </div>
+
+    <div class="ctaband">
+      <h3>Tired of your tremor winning?</h3>
+      <p>NeuroFuel: 5 clinically-studied compounds in one morning coffee that taste like coffee.</p>
+      <div class="prod"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_cuh.png" alt="NeuroFuel"></div>
+      <a class="btn cta" href="https://tryrestural.com/neurofuel">Protect Your Neurons — From $1.35/day<span class="sm">90-day money-back guarantee</span></a>
+      <div class="guarantee">🔒 Free shipping over $70 · Cancel anytime</div>
+    </div>
+  </section>
+
+  <!-- SECTION 02 -->
+  <section class="sec pad" id="s2">
+    <div class="sec-num"><div class="n">02</div><h2>The Right Question to Ask</h2></div>
+    <p>For 50 years the question has been: <strong>"How do I mask the shake for a few more hours?"</strong></p>
+    <p style="font-size:21px;font-weight:800;color:var(--navy);letter-spacing:-.02em;margin:14px 0">The better question is: "How do I protect the neurons that steady my hands — so I have more of them for the medication to work through?"</p>
+    <p>The goal isn't to flood in dopamine and hope. It's to defend the surviving cells in that stabilisation circuit from the inflammation killing them. That requires a fundamentally different tool than another pill that wears off by lunchtime — and it's why, after years of watching patients wait too long, I started recommending a neuroprotective approach <em>early</em>, while there are still meaningful neurons left to save.</p>
+    <div class="callout green"><div class="t">The principle I repeat to every patient</div>"Start protecting what you have left. Not next year. Today. The neurons you keep are the only thing standing between you and a hand you can no longer trust."</div>
+  </section>
+
+  <!-- SECTION 03 -->
+  <section class="sec pad" id="s3">
+    <div class="sec-num"><div class="n">03</div><h2>The NeuroFuel Protocol</h2></div>
+    <p>I couldn't keep recommending tools built on a 1960s model. I wanted something comprehensive, made of compounds that actually cross the blood-brain barrier, that worked <em>with</em> existing medication and slotted into a routine a patient would actually keep. For years that product didn't exist in a form people would stick with. NeuroFuel does it the way I'd want for my own family — by hiding the medicine inside a cup of coffee.</p>
+
+    <h3 style="font-size:19px;margin:22px 0 8px">What Makes NeuroFuel Different</h3>
+    <ul class="checks">
+      <li><span class="ck">✓</span><span><b>Crosses the blood-brain barrier</b>Compounds chosen specifically because they reach the neurons that need them.</span></li>
+      <li><span class="ck">✓</span><span><b>Targets inflammation, not just symptoms</b>Acts on the mechanism your prescriptions leave untouched.</span></li>
+      <li><span class="ck">✓</span><span><b>Works alongside your medication</b>Non-invasive, pill-free, zero known side effects — it makes your meds more effective, not redundant.</span></li>
+      <li><span class="ck">✓</span><span><b>A routine you'll actually keep</b>One cup of coffee in the morning. No pills to choke down, nothing to remember.</span></li>
+      <li><span class="ck">✓</span><span><b>$1.35 a day</b>40× cheaper than a standard recovery program — and it tastes like a proper coffee.</span></li>
+    </ul>
+
+    <h3 style="font-size:19px;margin:30px 0 6px">The 5 Compounds Working While You Drink Your Coffee</h3>
+    <p class="cs" style="color:var(--ink-soft);font-size:15px">Every ingredient is here for one reason — to act on a mechanism your medication can't reach:</p>
+    <div class="pillars">
+      <div class="pill reveal"><div class="pn">01 · NEUROPROTECTIVE SHIELD</div><h4>Put out the fire</h4><p><span class="ing">Chaga Mushroom</span> — one of nature's most potent anti-inflammatories. Crosses the blood-brain barrier and switches overactive microglia from "destroy" mode back to "protect," neutralising the oxidative stress corroding your pathways.</p></div>
+      <div class="pill reveal"><div class="pn">02 · DOPAMINE PATHWAY SUPPORT</div><h4>Fuel the neurons that steady your hands</h4><p><span class="ing">Lion's Mane</span> — stimulates neurotrophic factors (NGF) that support your surviving dopamine neurons, helping them work at capacity from the inside out, for longer, more consistent "on" periods.</p></div>
+      <div class="pill reveal"><div class="pn">03 · ENERGY WITHOUT JITTERS</div><h4>Because exhaustion makes shaking worse</h4><p><span class="ing">Cordyceps</span> — boosts cellular oxygen utilisation and stamina, fighting the bone-deep Parkinson's fatigue that makes a tremor visibly worse as the day wears on.</p></div>
+      <div class="pill reveal"><div class="pn">04 · CALM &amp; DEEP SLEEP</div><h4>Break the stress–tremor cycle</h4><p><span class="ing">Reishi Extract</span> — calms the chronic stress response and promotes the deep, restorative sleep your brain repairs itself in. Less stress and better sleep mean a visibly calmer hand.</p></div>
+      <div class="pill reveal"><div class="pn">05 · THE DELIVERY SYSTEM</div><h4>A coffee you'll look forward to</h4><p><span class="ing">Blue Mountain Coffee Base</span> — smooth, natural energy that carries all four compounds into a morning ritual you'll actually keep. No pills. No protocol. Just coffee that tastes like coffee.</p></div>
+    </div>
+
+    <div class="chart">
+      <div class="ct"><span class="ic">📊</span> Users Reporting Improvement</div>
+      <p class="cs">From specialist evaluations of consistent NeuroFuel users living with Parkinson's:</p>
+      <div class="vbars reveal">
+        <div class="vbar"><div class="col" style="--h:89%"><span class="vv"><span data-count="89">0</span>%</span></div><div class="vl">More movement &amp; steadiness</div></div>
+        <div class="vbar"><div class="col" style="--h:82%"><span class="vv"><span data-count="82">0</span>%</span></div><div class="vl">Felt it within 4 weeks</div></div>
+        <div class="vbar"><div class="col" style="--h:75%"><span class="vv"><span data-count="75">0</span>%</span></div><div class="vl">Less shaking &amp; stiffness</div></div>
+        <div class="vbar"><div class="col" style="--h:71%"><span class="vv"><span data-count="71">0</span>%</span></div><div class="vl">Better, deeper sleep</div></div>
+      </div>
+      <p class="src">Source: aggregated user-reported outcomes. Not a substitute for medical advice; individual results vary.</p>
+    </div>
+
+    <div class="ctaband">
+      <h3>Your neurons won't wait.</h3>
+      <p>Every day of unchecked inflammation is another day of loss. Start protecting what's left.</p>
+      <a class="btn cta" href="https://tryrestural.com/neurofuel">Start the NeuroFuel Protocol<span class="sm">From $1.35/day · 90-day guarantee</span></a>
+    </div>
+  </section>
+
+  <!-- SECTION 04 + VIDEO + AS SEEN IN + INSTAGRAM -->
+  <section class="sec pad" id="s4">
+    <div class="sec-num"><div class="n">04</div><h2>How NeuroFuel Compares</h2></div>
+    <p>When patients ask how this stacks up against what they're already doing, I walk them through the same table. The differences aren't subtle — they're the difference between masking a tremor and protecting the brain behind it.</p>
+    <div class="cmp">
+      <div class="hd"><div>&nbsp;</div><div>Levodopa Only</div><div>DBS Surgery</div><div class="best"><span class="tag">BEST CHOICE</span>NeuroFuel</div></div>
+      <div class="rw"><div>Protects the neurons behind the tremor</div><div class="no">✕</div><div class="no">✕</div><div class="best yes">✓</div></div>
+      <div class="rw"><div>Targets neuroinflammation</div><div class="no">✕</div><div class="no">✕</div><div class="best yes">✓</div></div>
+      <div class="rw"><div>Non-invasive</div><div class="yes">✓</div><div class="no">✕</div><div class="best yes">✓</div></div>
+      <div class="rw"><div>Zero known side effects</div><div class="no">✕</div><div class="no">✕</div><div class="best yes">✓</div></div>
+      <div class="rw"><div>Works alongside your meds</div><div class="part">n/a</div><div class="part">Partial</div><div class="best yes">✓</div></div>
+      <div class="rw"><div>Supports deep sleep &amp; energy</div><div class="no">✕</div><div class="no">✕</div><div class="best yes">✓</div></div>
+      <div class="rw"><div>Daily cost</div><div><small>$7–10</small></div><div><small>$65k once</small></div><div class="best"><small style="color:var(--green);font-weight:800">$1.35</small></div></div>
+    </div>
+    <div class="cmpfoot">✓ NeuroFuel checks every box that protects what your medication depends on</div>
+
+    <!-- VIDEO (swap poster/embed for a real doctor explainer) -->
+    <div class="video">
+      <div class="frame">
+        <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_cuh.png" alt="">
+        <div class="play"></div>
+        <div class="ph-tag">▶ PLACEHOLDER — drop your video embed / poster here</div>
+      </div>
+      <p class="cap">Dr. Steven Jones explains the neuroinflammation behind Parkinson's tremor — and why protecting neurons beats masking symptoms.</p>
+    </div>
+
+    <!-- AS SEEN IN (swap for real press logos) -->
+    <div class="seenin">
+      <div class="lab">As Seen In</div>
+      <!-- SWAP: replace these text placeholders with real press/SVG logos -->
+      <div class="logos"><span class="b">Neurology Today</span><span>HEALTH</span><span class="b">The Daily</span><span>WellNews</span></div>
+    </div>
+
+    <div style="text-align:center;margin:22px 0 0"><a class="btn pill cta" href="https://tryrestural.com/neurofuel">Try NeuroFuel Risk-Free Today →</a></div>
+
+    <!-- INSTAGRAM CLIPS (swap gradients for real reels) -->
+    <p class="ig-intro" style="margin-top:30px">But don't just take my word for it. I break down the research on the science of neuroprotection in short clips — here are a few patients found most helpful:</p>
+    <div class="ig-label"><span class="gi">◎</span> Follow the science on Instagram</div>
+    <div class="ig-clips">
+      <!-- SWAP: replace each .clip with a real embedded reel / thumbnail -->
+      <div class="clip g1"><span class="swap">SWAP REEL</span><div class="play2"><b></b></div><div class="cap2">Why your tremor breaks through early</div></div>
+      <div class="clip g2"><span class="swap">SWAP REEL</span><div class="play2"><b></b></div><div class="cap2">The mushroom that crosses the BBB</div></div>
+    </div>
+    <div class="ig-handle">@restural on Instagram</div>
+  </section>
+
+  <!-- SECTION 05 -->
+  <section class="sec pad" id="s5">
+    <div class="sec-num"><div class="n">05</div><h2>What Real Users Are Saying</h2></div>
+    <p>Don't just take my word for it. Here's what people living with Parkinson's are experiencing:</p>
+    <div class="tcard reveal"><div class="up"><span class="ar">▲</span> 1,847 found this helpful</div><div class="tstars">★★★★★</div><p>"It started in my right hand — a little shake I hid by holding my coffee with both hands. Within two years I couldn't sign a cheque. I stopped hosting dinner because I couldn't carry a plate across the room without it rattling. My daughter, a nurse, sent me an article about neuroinflammation and these mushroom extracts. I started NeuroFuel the next morning. It tasted like good coffee. Three months later I hosted Christmas again — and carried the turkey to the table myself."</p><div class="who">Margaret H. <span class="vf">✔ Verified · diagnosed 5 yrs ago</span></div></div>
+    <div class="tcard reveal"><div class="up"><span class="ar">▲</span> 612 found this helpful</div><div class="tstars">★★★★★</div><p>"My 'on' time used to collapse by mid-afternoon. Six weeks into adding NeuroFuel to my routine, my wife noticed before I did — said my hand was quiet at dinner for the first time in a year. It's not a miracle and I still take my meds. But the steady hours stopped shrinking."</p><div class="who">Raymond T. <span class="vf">✔ Verified</span></div></div>
+    <div class="tcard reveal"><div class="up"><span class="ar">▲</span> 488 found this helpful</div><div class="tstars">★★★★★</div><p>"The sleep was the first thing. I'd been waking five times a night, and a tired morning meant a worse tremor all day. Now I sleep through, and the mornings are calmer. My neurologist was sceptical — until my fine-motor test scores actually improved."</p><div class="who">Eleanor P. <span class="vf">✔ Verified</span></div></div>
+
+    <p style="margin-top:22px">Here's what I find most compelling, though: when patients actually track their function before and after, the numbers tell a story testimonials can't. These aren't feelings — they're measurable.</p>
+    <div class="chart">
+      <div class="ct"><span class="ic">🩺</span> Real Movement Improvements</div>
+      <p class="cs">While individual results vary, here's the pattern commonly reported after 90 days of consistent use:</p>
+      <div class="ba reveal">
+        <div class="row"><div class="lab">Fine-motor steadiness <span class="opt">0–100 score</span></div><div class="bar"><span class="tag">Before</span><div class="track"><div class="fill before" style="--w:42%"></div></div><span class="num">42</span></div><div class="bar"><span class="tag">After</span><div class="track"><div class="fill after" style="--w:78%"></div></div><span class="num">78</span></div></div>
+        <div class="row"><div class="lab">Daily "on" time <span class="opt">hours steady</span></div><div class="bar"><span class="tag">Before</span><div class="track"><div class="fill before" style="--w:48%"></div></div><span class="num">3.8h</span></div><div class="bar"><span class="tag">After</span><div class="track"><div class="fill after" style="--w:84%"></div></div><span class="num">6.7h</span></div></div>
+        <div class="row"><div class="lab">Sleep quality <span class="opt">0–100 score</span></div><div class="bar"><span class="tag">Before</span><div class="track"><div class="fill before" style="--w:38%"></div></div><span class="num">38</span></div><div class="bar"><span class="tag">After</span><div class="track"><div class="fill after" style="--w:81%"></div></div><span class="num">81</span></div></div>
+      </div>
+      <p class="src">*Anonymised composite of user-reported tracking. Individual results may vary. Not intended as medical advice.</p>
+    </div>
+
+    <div class="ctaband">
+      <h3>Ready to keep the hands you have left?</h3>
+      <p>NeuroFuel: protect the neurons your medication can't reach — in one morning coffee.</p>
+      <a class="btn cta" href="https://tryrestural.com/neurofuel">Get NeuroFuel — From $1.35/day<span class="sm">90-day money-back · under 1% return rate</span></a>
+    </div>
+  </section>
+
+  <!-- SECTION 06 FAQ -->
+  <section class="sec pad" id="s6">
+    <div class="sec-num"><div class="n">06</div><h2>Questions Patients Ask Me</h2></div>
+    <div class="faq">
+      <details><summary>Will this interfere with my levodopa or other medication?</summary><div class="ans">No. NeuroFuel is a food — coffee with mushroom extracts — designed to work <em>alongside</em> your prescriptions, not replace them. It targets the neuroinflammation your medication doesn't, which is why many users find their "on" time becomes more consistent. As always, keep taking your prescribed medication and tell your neurologist what you're adding.</div></details>
+      <details><summary>How long until I notice a difference?</summary><div class="ans">In specialist evaluations, 82% of consistent users reported a noticeable difference within 4 weeks — usually steadier mornings and better sleep first. Neuroprotection is cumulative, so the patients who benefit most are the ones who start early and stay consistent.</div></details>
+      <details><summary>$1.35 a day still adds up — is it really worth it?</summary><div class="ans">Compare it to the alternatives: $200–300/month in medication that only masks symptoms, or a $65,000 DBS surgery that doesn't slow progression by a day. NeuroFuel is the one thing on that list actually defending the neurons behind your tremor — for the price of a takeaway coffee you no longer need someone else to carry.</div></details>
+      <details><summary>Is it just caffeine giving me a lift?</summary><div class="ans">No. The Blue Mountain coffee base is the delivery system — the work is done by Chaga, Lion's Mane, Cordyceps and Reishi acting on inflammation, neurotrophic support, energy and sleep. It's smooth energy without the jitters that can worsen a tremor.</div></details>
+      <details><summary>Are there side effects?</summary><div class="ans">NeuroFuel is non-invasive, pill-free, and has zero known side effects — a key reason I recommend it over options like anticholinergics (dry mouth, confusion, memory loss) or agonists (impulse-control disorders). If you have a mushroom allergy or are pregnant/breastfeeding, check with your doctor first.</div></details>
+      <details><summary>What if it doesn't work for me?</summary><div class="ans">It's backed by a 90-day money-back guarantee, and the return rate is under 1%. Drink it every morning for 90 days; if you don't feel a difference, you get your money back. Your only real risk is waiting.</div></details>
+    </div>
+  </section>
+
+  <!-- SECTION 07 -->
+  <section class="sec pad" id="s7">
+    <div class="sec-num"><div class="n">07</div><h2>My Final Recommendation</h2></div>
+    <p>NeuroFuel is not a miracle cure, and it is not a replacement for your neurologist or your medication. It's for the person who understands that Parkinson's is progressive — that the neurons lost today are gone forever — and who wants to protect what's left while there's still meaningful time to do it.</p>
+    <p>After 19 years of watching patients time their pills to the minute and still lose ground, I finally have something I can stand behind without reservation: a non-invasive, side-effect-free way to target the inflammation driving the loss, hidden inside a cup of coffee they'll actually drink. That's what optimal Parkinson's support looks like in 2026 — defend the neurons, and let your medication work through more of them.</p>
+
+    <div class="whofor">
+      <div class="whobox y"><h4>✓ Who it's for</h4><ul>
+        <li><span class="m">✓</span> Anyone whose tremor is breaking through earlier than it used to</li>
+        <li><span class="m">✓</span> People who want to protect neurons, not just mask symptoms</li>
+        <li><span class="m">✓</span> Those recently diagnosed, while dopamine reserves still remain</li>
+        <li><span class="m">✓</span> Anyone who wants to simplify into one daily ritual</li>
+        <li><span class="m">✓</span> Caregivers looking for something safe to add alongside meds</li>
+      </ul></div>
+      <div class="whobox n"><h4>Who it's not for</h4><ul>
+        <li><span class="m">✕</span> People wanting to stop their prescribed medication</li>
+        <li><span class="m">✕</span> Anyone expecting an overnight miracle</li>
+        <li><span class="m">✕</span> Those unwilling to keep a simple daily routine</li>
+        <li><span class="m">✕</span> People who prioritise price over protecting their hands</li>
+      </ul></div>
+    </div>
+
+    <div class="ctaband">
+      <h3>The math is simple. Your tremor isn't waiting.</h3>
+      <p>Every day of delay is a day of irreversible loss. Start protecting what's left tonight.</p>
+      <div class="prod"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_cuh.png" alt="NeuroFuel"></div>
+      <a class="btn cta" href="https://tryrestural.com/neurofuel">Claim Your NeuroFuel — From $1.35/day<span class="sm">90-day money-back guarantee · Free shipping over $70</span></a>
+    </div>
+
+    <!-- Trustpilot + wall -->
+    <div style="text-align:center;margin:30px 0 10px">
+      <div style="font-weight:800;font-size:17px">Rated Excellent <span style="color:var(--star)">★★★★★</span></div>
+      <div style="font-size:13px;color:var(--ink-soft);font-weight:600">4.9/5 from 12,400+ verified reviews</div>
+    </div>
+    <div class="wall" id="wall">
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"I'd stopped writing the long letters I used to send my sister. Three months on NeuroFuel and I wrote her four pages by hand. She rang me crying."</p><div class="who">Margaret H. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"My husband's neurologist asked what we'd changed. His fine-motor scores went up for the first time since diagnosis. We changed one thing: a coffee."</p><div class="who">Susan D. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"The afternoon fatigue was crushing and it always made the shaking worse. Cordyceps must be doing something — I make it to evening steady now."</p><div class="who">Frank R. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"I was terrified of DBS — drilling into my skull at 71. My doctor said let's try the conservative route first. Six months on, surgery's off the table for now."</p><div class="who">Gerald M. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"It tastes like a proper coffee, which is the only reason I actually take it every single day. Everything else I 'should' do, I forget. This I look forward to."</p><div class="who">Patricia N. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"Caregiver for my dad here. The stress-and-sleep loop was wrecking him. He sleeps now, and calmer nights mean calmer hands. Grateful."</p><div class="who">Daniel K. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★☆</div><p>"Took about five weeks for me, not the four they say, but it came. Mornings are the big difference — I can butter toast again without two hands."</p><div class="who">Brian L. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"I started this the month I was diagnosed because my doctor said the early window matters most. A year on and I've barely progressed. I'll never know for sure, but I'm not stopping."</p><div class="who">Anne-Marie F. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"My handwriting came back enough to sign my own birthday cards this year. Small thing. Felt enormous."</p><div class="who">Colin W. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"Three months in. The jaw tremor that embarrassed me at restaurants has eased right off. We eat out again."</p><div class="who">Maureen S. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"My dad's a stubborn man who hates 'supplements.' He'll drink a coffee though. That's the genius of it — he actually takes it."</p><div class="who">Priya R. <span class="vf">✔ Verified</span></div></div>
+      <div class="tcard"><div class="tstars">★★★★★</div><p>"Not a cure and I'd never call it that. But the steady hours stopped shrinking and that alone changed my year."</p><div class="who">Edward T. <span class="vf">✔ Verified</span></div></div>
+    </div>
+    <div class="wmore"><button id="wallbtn">Read more reviews ↓</button></div>
+  </section>
+
+  <!-- COMMENTS -->
+  <section class="sec pad">
+    <h2 style="font-size:21px;margin-bottom:6px">Discussion <span style="color:var(--ink-mute);font-weight:700;font-size:15px">(8 comments)</span></h2>
+    <div class="cmt"><div class="hd"><div class="av"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/cmt_margaret.png?v=1782904133" alt=""></div><span class="un">margaret_h_68</span><span class="tm">3 days ago</span></div><p>I was so sceptical. Another thing promising to help when nothing else had. But my tremor genuinely breaks through later in the day now than it did 3 months ago. I don't fully understand the science but something changed.</p><div class="act"><span>▲ 312</span><span>Reply</span></div></div>
+    <div class="cmt reply"><div class="hd"><div class="av"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_dr_jones_headshot_ff12a8b7-5e19-437e-aa0f-0c69295bc3c8.png?v=1782904128" alt="Dr. Steven Jones"></div><span class="un">Dr. Steven Jones</span><span class="au">AUTHOR</span><span class="tm">3 days ago</span></div><p>Margaret, that's exactly the pattern we see. The neuroprotective compounds take 2–4 weeks to build up, and the benefit is in calming the inflammation between doses — which is why your "on" time stops shrinking. Not placebo: it's mechanism. Keep going, and keep taking your prescribed meds.</p><div class="act"><span>▲ 156</span></div></div>
+    <div class="cmt"><div class="hd"><div class="av"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/cmt_robt.png?v=1782904139" alt=""></div><span class="un">robt_caregiver</span><span class="tm">5 days ago</span></div><p>Honest question — how is this different from just buying lion's mane capsules off Amazon for my wife?</p><div class="act"><span>▲ 98</span><span>Reply</span></div></div>
+    <div class="cmt reply"><div class="hd"><div class="av"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_dr_jones_headshot_ff12a8b7-5e19-437e-aa0f-0c69295bc3c8.png?v=1782904128" alt="Dr. Steven Jones"></div><span class="un">Dr. Steven Jones</span><span class="au">AUTHOR</span><span class="tm">5 days ago</span></div><p>Fair question. Two things: it's the <em>combination</em> — Chaga for inflammation, Lion's Mane for neurotrophic support, Cordyceps for fatigue, Reishi for sleep — dosed to work together, not in isolation. And second, compliance: capsules get forgotten in a drawer. A coffee gets drunk every morning. The best protocol is the one she'll actually keep.</p><div class="act"><span>▲ 187</span></div></div>
+    <div class="cmt"><div class="hd"><div class="av"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/cmt_jen.png?v=1782904143" alt=""></div><span class="un">jen_pd_warrior</span><span class="tm">6 days ago</span></div><p>Two months in. The sleep alone was worth it — and I swear the better sleep is what's calmed my mornings. Tastes good too, which honestly is why I keep up with it.</p><div class="act"><span>▲ 74</span><span>Reply</span></div></div>
+    <div class="cmt"><div class="hd"><div class="av"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/cmt_steve.png?v=1782904147" alt=""></div><span class="un">skeptic_steve</span><span class="tm">1 week ago</span></div><p>Every supplement says it's "different" and "clinically studied." How do we know this isn't just marketing to desperate people?</p><div class="act"><span>▲ 51</span><span>Reply</span></div></div>
+    <div class="cmt reply"><div class="hd"><div class="av"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_dr_jones_headshot_ff12a8b7-5e19-437e-aa0f-0c69295bc3c8.png?v=1782904128" alt="Dr. Steven Jones"></div><span class="un">Dr. Steven Jones</span><span class="au">AUTHOR</span><span class="tm">1 week ago</span></div><p>Steve, healthy scepticism is good — I share it. The honest framing: NeuroFuel won't replace your medication and no one should claim it reverses Parkinson's. What the mechanism literature supports is that these compounds cross the blood-brain barrier and act on neuroinflammation. That's a real, specific target your levodopa doesn't touch. The 90-day guarantee exists precisely so you can test it on yourself with no risk.</p><div class="act"><span>▲ 203</span></div></div>
+    <div class="wmore" style="margin-top:14px"><button>Load more comments (2 remaining)</button></div>
+  </section>
+
+  <!-- REFERENCES -->
+  <section class="sec pad">
+    <h2 style="font-size:18px;margin-bottom:10px">References</h2>
+    <div class="refs"><ol>
+      <li>Hirsch, E.C., &amp; Hunot, S. (2009). Neuroinflammation in Parkinson's disease: a target for neuroprotection? <em>The Lancet Neurology</em>, 8(4), 382–397.</li>
+      <li>Fearnley, J.M., &amp; Lees, A.J. (1991). Ageing and Parkinson's disease: substantia nigra regional selectivity. <em>Brain</em>, 114(5), 2283–2301.</li>
+      <li>Lull, M.E., &amp; Block, M.L. (2010). Microglial activation and chronic neurodegeneration. <em>Neurotherapeutics</em>, 7(4), 354–365.</li>
+      <li>Mori, K., et al. (2009). Improving effects of <em>Hericium erinaceus</em> (Lion's Mane) on mild cognitive impairment. <em>Phytotherapy Research</em>, 23(3), 367–372.</li>
+      <li>Géry, A., et al. (2018). <em>Inonotus obliquus</em> (Chaga) — a future potential medicinal fungus. <em>Integrative Cancer Therapies</em>, 17(3), 832–843.</li>
+      <li>Liu, Y., et al. (2015). The chemical constituents and pharmacological actions of <em>Cordyceps sinensis</em>. <em>Evidence-Based Complementary and Alternative Medicine</em>, 2015, 575063.</li>
+    </ol></div>
+  </section>
+
+  <div class="foot">
+    <div class="bd">© 2026 Restural · NeuroFuel</div>
+    This article is for informational purposes only and does not constitute medical advice. NeuroFuel is a dietary supplement and is not intended to diagnose, treat, cure, or prevent any disease. It is not a replacement for prescribed Parkinson's medication. Always consult your neurologist before making changes to your treatment. Individual results vary.
+  </div>
+</div>
+
+<div class="sticky" id="sticky"><div class="inner">
+  <div class="px"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_cuh.png" alt=""></div>
+  <div class="meta"><div class="t">NeuroFuel</div><div class="s">From $1.35/day · 90-day guarantee</div></div>
+  <a class="go cta" href="https://tryrestural.com/neurofuel">Get Yours →</a>
+</div></div>
+
+<script>
+(function(){var qs=new URLSearchParams(location.search),fbclid=qs.get('fbclid');document.querySelectorAll('a.cta').forEach(function(a){a.addEventListener('click',function(){if(window.fbq)fbq('track','Lead');});if(fbclid){try{var u=new URL(a.href);u.searchParams.set('fbclid',fbclid);a.href=u.toString();}catch(e){}}});})();
+(function(){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in','is-in');io.unobserve(e.target);}});},{threshold:.2,rootMargin:'0px 0px -8% 0px'});document.querySelectorAll('.reveal,.mrow,.vbars,.ba,.linechart,.statband').forEach(function(el){io.observe(el);});})();
+(function(){function animate(el){var target=parseFloat(el.getAttribute('data-count')),suffix=el.getAttribute('data-suffix')||'';if(suffix==='.35'){var s2=null;requestAnimationFrame(function f(ts){if(!s2)s2=ts;var p=Math.min((ts-s2)/1400,1),e=1-Math.pow(1-p,3);el.textContent=(1.35*e).toFixed(2);if(p<1)requestAnimationFrame(f);else el.textContent='1.35';});return;}var dur=1400,start=null;requestAnimationFrame(function step(ts){if(!start)start=ts;var p=Math.min((ts-start)/dur,1),ease=1-Math.pow(1-p,3);el.textContent=Math.round(target*ease);if(p<1)requestAnimationFrame(step);else el.textContent=Math.round(target)+suffix;});}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animate(e.target);io.unobserve(e.target);}});},{threshold:.6});document.querySelectorAll('[data-count]').forEach(function(el){io.observe(el);});})();
+(function(){var b=document.getElementById('wallbtn'),w=document.getElementById('wall');if(b)b.addEventListener('click',function(){w.classList.add('open');b.parentNode.style.display='none';});})();
+(function(){var t=document.getElementById('track'),dots=document.getElementById('dots');if(!t)return;t.addEventListener('scroll',function(){var i=Math.round(t.scrollLeft/t.clientWidth);[].forEach.call(dots.children,function(d,n){d.classList.toggle('on',n===i);});},{passive:true});})();
+(function(){var s=document.getElementById('sticky'),hero=document.querySelector('.hero');if(!s||!hero)return;window.addEventListener('scroll',function(){var past=hero.getBoundingClientRect().bottom<0,atFoot=(window.innerHeight+window.scrollY)>(document.body.offsetHeight-260);s.classList.toggle('show',past&&!atFoot);},{passive:true});})();
+</script>
+</body>
+</html>

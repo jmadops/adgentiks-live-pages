@@ -86,6 +86,12 @@ h1.head .hl{color:var(--blue)}
 .dots i{width:7px;height:7px;border-radius:50%;background:var(--line);transition:.2s}
 .dots i.on{background:var(--blue);width:20px;border-radius:4px}
 .hero-cap{font-size:13px;color:var(--ink-mute);margin:12px 0 0;font-weight:600}
+/* builder-safe hero gallery (plain div+img, no scroll container — Funnelish strips scroll carousels) */
+.hgal{margin:22px 0 4px}
+.hcell{position:relative;height:0;padding-bottom:100%;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,#EEF3FE 0%,#F6F7F9 100%)}
+.hcell img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block}
+.hgal .hero-main{border-radius:20px;margin-bottom:12px}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 
 /* author */
 .byline{display:flex;gap:14px;align-items:center;margin:24px 0 8px;padding:16px;background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--radius)}
@@ -365,16 +371,14 @@ h1.head .hl{color:var(--blue)}
     <h1 class="head">Levodopa Only Solves <span class="hl">Half the Puzzle</span> of Parkinson's. The Other Half Is the Neurons in Your Brain Dying.</h1>
     <p class="sub">For 19 years I treated the half levodopa was built for and watched the other half slip away regardless. The neurons behind the tremor were dying, and nothing my patients took was protecting them. Here's what finally did.</p>
 
-    <div class="carousel">
-      <div class="track" id="track">
-        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/11_hold_window.png?v=1782902647" alt="Dr. Steven Jones with NeuroFuel"></div>
-        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/03_ingredients_radial.png?v=1782902432" alt="NeuroFuel — 5 compounds, one morning coffee"></div>
-        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/07_how_it_works.png?v=1782902431" alt="How NeuroFuel works"></div>
-        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/06_value_per_day.png?v=1782902432" alt="NeuroFuel — just $1.35 a day"></div>
-        <div class="slide"><img class="fill" src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/05_five_compounds_stat.png?v=1782902432" alt="5 clinically-studied compounds"></div>
+    <div class="hgal">
+      <div class="hcell hero-main"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/11_hold_window.png?v=1782902647" alt="Dr. Steven Jones with NeuroFuel"></div>
+      <div class="hgrid">
+        <div class="hcell"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/03_ingredients_radial.png?v=1782902432" alt="NeuroFuel — 5 compounds, one morning coffee"></div>
+        <div class="hcell"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/07_how_it_works.png?v=1782902431" alt="How NeuroFuel works"></div>
+        <div class="hcell"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/06_value_per_day.png?v=1782902432" alt="NeuroFuel — just $1.35 a day"></div>
+        <div class="hcell"><img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/05_five_compounds_stat.png?v=1782902432" alt="5 clinically-studied compounds"></div>
       </div>
-      <div class="dots" id="dots"><i class="on"></i><i></i><i></i><i></i><i></i></div>
-      <div class="swipe">← Swipe to see more →</div>
     </div>
     <div class="hero-cap">NeuroFuel — Morning Coffee for Brain Recovery</div>
   </section>

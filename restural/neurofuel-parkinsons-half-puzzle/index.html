@@ -69,11 +69,10 @@ h1.head .hl{color:var(--blue)}
 .carousel{margin:22px 0 4px}
 .track{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:2px 0 10px;scrollbar-width:none}
 .track::-webkit-scrollbar{display:none}
-.slide{flex:0 0 100%;scroll-snap-align:center;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,#EEF3FE 0%,#F6F7F9 100%);aspect-ratio:1/1;display:flex;align-items:center;justify-content:center;position:relative}
+/* square slides via padding-bottom (NOT aspect-ratio) so page builders like Funnelish keep the height */
+.slide{flex:0 0 100%;scroll-snap-align:center;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:linear-gradient(180deg,#EEF3FE 0%,#F6F7F9 100%);position:relative;height:0;padding-bottom:100%}
 .slide img{max-width:78%;margin:auto}
-.slide img.fill{max-width:100%;width:100%;height:100%;object-fit:cover;margin:0}
-/* fallback for platforms (e.g. Funnelish preview) that don't honor aspect-ratio → keeps slides square instead of collapsing */
-@supports not (aspect-ratio:1/1){.slide{height:0;padding-bottom:100%}.slide>img,.slide>.badge{position:absolute;top:0;left:0}.slide>img.fill{width:100%;height:100%}}
+.slide img.fill{position:absolute;top:0;left:0;max-width:none;width:100%;height:100%;object-fit:cover;margin:0}
 .slide .badge{position:absolute;top:14px;left:14px;background:#fff;border:1px solid var(--line);border-radius:999px;font-size:11.5px;font-weight:800;color:var(--navy);padding:5px 11px}
 /* styled placeholder slides (swap for real lifestyle photos) */
 .slide.ph{background:linear-gradient(155deg,#13267F,#2C6BF0);color:#fff;flex-direction:column;text-align:center;padding:26px}

@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--
+BRAND ASSUMPTIONS CHECKLIST
+===========================
+1. Source: USER COPY (client-supplied). Angle: MS — DMT slows the immune attack but does not
+   repair myelin; NeuroFuel positioned as the repair-side support (works alongside medication).
+2. Author byline: Jade M. (fictional editorial byline). Headshot: FAL-generated, hosted on Shopify CDN.
+3. Item + author imagery: FAL nano-banana-pro, generated from the copy's [IMAGE:] briefs. Offer/product
+   image + footer logo: real nf_cuh.png product shot (logo is a PLACEHOLDER — swap for a NeuroFuel wordmark).
+4. Offer verified vs restural-kit/briefs/PRODUCT.md: 33% OFF + FREE SHIPPING, 90-Day Money-Back Guarantee. OK.
+5. CTA URL: https://tryrestural.com/neurofuel (+ UTM utm_campaign=ms-dmt-gap, Meta Pixel InitiateCheckout onclick).
+6. COMPLIANCE FLAGS (from client FLAG note): the "82%" stat originates from the brand's in-house consumer
+   trial (stroke/PT/rehab, 520 patients, 2023) and is applied to an MS population here — NOT an MS clinical
+   trial. The "75%" stat was omitted. Named drugs + remyelination/movement claims are aggressive for a
+   supplement/MS audience — kept per client copy; route through ad-platform/legal review before running.
+7. Disclaimer: dietary-supplement / informational-only line added in the footer (health product).
+8. Countdown timer: 2h client-side reset on load (template default). "Last updated" = 3 days ago (template JS).
+-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Reasons MS Patients on Medication Are Adding This Morning Coffee | NeuroFuel</title>
+    <!--
+    =====================================================================
+    LISTICLE TEMPLATE: 8 Reasons (Down To Ground Pattern)
+    =====================================================================
+    Hand-written to match downtoground.co/pages/article-listicle pixel-for-pixel.
+    Every CSS value extracted from the live page.
+
+    Structure:
+      Announcement bar (dark green top + brown countdown bar) →
+      Article header (H1 + author byline + summary paragraph) →
+      Divider →
+      8× listicle items (image left, text right, full-width) →
+      Offer section (warm cream bg, 2-col card, CTA + countdown) →
+      Footer (sage green bg, logo, links)
+
+    USAGE:
+    1. Replace all {{token}} placeholders with values from downtoground-listicle-tokens.json.
+    2. CSS custom properties in :root for brand injection.
+    3. Replo-compatible: remove <!DOCTYPE>, <html>, <head>, <body> tags,
+       wrap in a single root div and scope with brand-prefix ID.
+    =====================================================================
+    -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+        /* =============================================================
+           CSS CUSTOM PROPERTIES — Brand Injection Layer
+           ============================================================= */
+        :root {
+            --dtg-green-dark:     #3a5743;   /* announcement bar bg */
+            --dtg-brown:          #9a6d38;   /* countdown bar bg */
+            --dtg-yellow:         #FFD712;   /* sale badge bg */
+            --dtg-yellow-text:    #333333;   /* sale badge text */
+            --dtg-cta:            #9a6d38;   /* CTA button bg (brown/olive) */
+            --dtg-cta-hover:      #7d5a2e;
+            --dtg-red:            #FF3B30;   /* discount text in offer section */
+            --dtg-offer-bg:       #fff6ee;   /* offer section background */
+            --dtg-offer-border:   #CC904A;   /* dashed border on deal card */
+            --dtg-footer-bg:      #b5c4ad;   /* sage green footer */
+            --dtg-text:           #111111;
+            --dtg-text-body:      #333333;
+            --dtg-divider:        #e0e0e0;
+            --dtg-timer-box:      #ffffff;
+            --dtg-timer-text:     #333333;
+            --dtg-timer-sub:      #707070;
+
+            --dtg-font:           'Inter', sans-serif;
+            --dtg-content-width:  1060px;
+        }
+
+        /* =============================================================
+           RESET + BASE
+           ============================================================= */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: var(--dtg-font);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--dtg-text-body);
+            background: #ffffff;
+            -webkit-font-smoothing: antialiased;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+        strong { font-weight: 700; }
+
+        /* =============================================================
+           SECTION 1: ANNOUNCEMENT BAR (top dark green strip)
+           "Best Price Ever + FREE Gifts Today Only! 🎁"
+           ============================================================= */
+        .dtg-announce {
+            background: var(--dtg-green-dark);
+            color: #ffffff;
+            text-align: center;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        /* =============================================================
+           SECTION 2: COUNTDOWN BAR (brown bar with timer)
+           "Limited Offer | [BADGE] UP TO 42% OFF | 01 HRS : 59 MIN : 54 SEC"
+           ============================================================= */
+        .dtg-countdown-bar {
+            background: var(--dtg-brown);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 8px 16px;
+            flex-wrap: wrap;
+        }
+        .dtg-countdown-bar__label {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        .dtg-countdown-bar__badge {
+            background: var(--dtg-yellow);
+            color: var(--dtg-yellow-text);
+            font-size: 13px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+        .dtg-timer {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .dtg-timer__card {
+            background: var(--dtg-timer-box);
+            border-radius: 5px;
+            width: 34px;
+            height: 34px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .dtg-timer__num {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dtg-timer-text);
+            line-height: 1.2;
+        }
+        .dtg-timer__unit {
+            font-size: 9px;
+            font-weight: 400;
+            color: var(--dtg-timer-sub);
+            line-height: 1;
+            text-transform: uppercase;
+        }
+        .dtg-timer__sep {
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        /* =============================================================
+           SECTION 3: ARTICLE HEADER
+           H1, author byline (avatar + name + date), summary paragraph
+           ============================================================= */
+        .dtg-article {
+            max-width: var(--dtg-content-width);
+            margin: 0 auto;
+            padding: 32px 24px 0;
+        }
+        .dtg-article__title {
+            font-family: var(--dtg-font);
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dtg-text);
+            margin-bottom: 20px;
+        }
+        .dtg-article__byline {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+        .dtg-article__avatar {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .dtg-article__avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .dtg-article__byline-text {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.5;
+        }
+        .dtg-article__byline-text strong {
+            font-weight: 700;
+            color: var(--dtg-text);
+        }
+        .dtg-article__summary {
+            font-size: 16px;
+            line-height: 1.65;
+            color: var(--dtg-text-body);
+            margin-bottom: 24px;
+        }
+        .dtg-article__summary strong {
+            font-weight: 700;
+        }
+        .dtg-article__divider {
+            border: none;
+            border-top: 1px solid var(--dtg-divider);
+            margin: 0 0 0;
+        }
+
+        /* =============================================================
+           SECTION 4: LISTICLE ITEMS
+           Each item: full-width row, image left (~41%), text right
+           Item image: ~360px wide, square-ish
+           ============================================================= */
+        .dtg-items {
+            max-width: var(--dtg-content-width);
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .dtg-item {
+            display: grid;
+            grid-template-columns: 360px 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 40px 0;
+            border-bottom: 1px solid var(--dtg-divider);
+        }
+        .dtg-item:last-child {
+            border-bottom: none;
+        }
+        .dtg-item__img img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .dtg-item__content {
+            padding: 8px 0;
+        }
+        .dtg-item__title {
+            font-family: var(--dtg-font);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--dtg-text);
+            margin-bottom: 14px;
+        }
+        .dtg-item__body {
+            font-size: 16px;
+            line-height: 1.65;
+            color: var(--dtg-text-body);
+        }
+        .dtg-item__body p { margin-bottom: 12px; }
+        .dtg-item__body p:last-child { margin-bottom: 0; }
+        .dtg-item__body strong { font-weight: 700; }
+
+        /* =============================================================
+           SECTION 5: OFFER SECTION
+           Warm cream bg, "Limited Offer" tag overlapping card,
+           2-col card: product image left, CTA content right
+           ============================================================= */
+        .dtg-offer-section {
+            background: var(--dtg-offer-bg);
+            padding: 48px 24px 64px;
+            position: relative;
+        }
+        .dtg-offer-section__inner {
+            max-width: var(--dtg-content-width);
+            margin: 0 auto;
+            position: relative;
+        }
+        /* "Limited Offer" green pill sitting above the card */
+        .dtg-offer-tag {
+            background: var(--dtg-green-dark);
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 5px 28px;
+            border-radius: 8px;
+            display: inline-block;
+            position: absolute;
+            top: -18px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            z-index: 2;
+        }
+        .dtg-offer-card {
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+            display: flex;
+            overflow: hidden;
+        }
+        .dtg-offer-card__img {
+            width: 50%;
+            flex-shrink: 0;
+        }
+        .dtg-offer-card__img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .dtg-offer-card__content {
+            width: 50%;
+            padding: 44px 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 16px;
+        }
+        /* "FREE Gifts With Your Order! 🎁" subline with flanking lines */
+        .dtg-offer-card__subline {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--dtg-text);
+        }
+        .dtg-offer-card__subline-rule {
+            flex: 1;
+            height: 1px;
+            background: #DEDEDE;
+        }
+        .dtg-offer-card__title {
+            font-family: var(--dtg-font);
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1.2;
+            color: var(--dtg-text);
+        }
+        .dtg-offer-card__title em {
+            font-style: normal;
+            color: var(--dtg-red);
+        }
+        .dtg-offer-card__body {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.5;
+        }
+        /* CTA button */
+        .dtg-offer-card__cta {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--dtg-cta);
+            color: #ffffff;
+            font-family: var(--dtg-font);
+            font-size: 16px;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 6px;
+            text-decoration: none;
+            width: 100%;
+            transition: background 0.2s;
+        }
+        .dtg-offer-card__cta:hover { background: var(--dtg-cta-hover); }
+        .dtg-offer-card__cta svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+        /* Deal ending countdown in offer card */
+        .dtg-offer-card__deal {
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--dtg-text);
+        }
+        .dtg-offer-card__deal-timer {
+            color: var(--dtg-red);
+            font-weight: 800;
+        }
+        /* Dashed sell-out + shipping badge */
+        .dtg-offer-card__badges {
+            border: 1.5px dashed var(--dtg-offer-border);
+            border-radius: 6px;
+            padding: 10px 16px;
+            font-size: 13px;
+            color: var(--dtg-text);
+            width: 100%;
+        }
+        .dtg-offer-card__badges strong { font-weight: 800; }
+        .dtg-offer-card__badges .dtg-free {
+            font-weight: 700;
+        }
+        .dtg-offer-card__guarantee {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* =============================================================
+           SECTION 6: FOOTER
+           Sage green bg, logo, social blurb, links
+           ============================================================= */
+        .dtg-footer {
+            background: var(--dtg-footer-bg);
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .dtg-footer__logo {
+            margin: 0 auto 16px;
+        }
+        .dtg-footer__logo img {
+            height: 36px;
+            width: auto;
+            margin: 0 auto;
+        }
+        .dtg-footer__heading {
+            font-size: 20px;
+            font-weight: 700;
+            color: #3a5743;
+            margin-bottom: 8px;
+        }
+        .dtg-footer__body {
+            font-size: 14px;
+            color: #4a6050;
+            margin-bottom: 20px;
+            max-width: 560px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .dtg-footer__links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        .dtg-footer__links a {
+            font-size: 13px;
+            color: #4a6050;
+            text-decoration: underline;
+        }
+        .dtg-footer__copyright {
+            font-size: 12px;
+            color: #6a8070;
+        }
+
+        /* =============================================================
+           RESPONSIVE: Tablet (max-width: 900px)
+           ============================================================= */
+        @media (max-width: 900px) {
+            .dtg-article__title { font-size: 28px; }
+            .dtg-item {
+                grid-template-columns: 280px 1fr;
+                gap: 24px;
+            }
+            .dtg-offer-card__content { padding: 32px 28px; }
+            .dtg-offer-card__title { font-size: 24px; }
+        }
+
+        /* =============================================================
+           RESPONSIVE: Mobile (max-width: 640px)
+           ============================================================= */
+        @media (max-width: 640px) {
+            .dtg-article { padding: 24px 16px 0; }
+            .dtg-article__title { font-size: 24px; }
+            .dtg-items { padding: 0 16px; }
+            .dtg-item {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 28px 0;
+            }
+            .dtg-offer-section { padding: 40px 16px 48px; }
+            .dtg-offer-card { flex-direction: column; }
+            .dtg-offer-card__img { width: 100%; height: 240px; }
+            .dtg-offer-card__content { width: 100%; padding: 28px 20px; }
+            .dtg-countdown-bar { gap: 8px; }
+            .dtg-countdown-bar__label { font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ================================================================
+         SECTION 1: ANNOUNCEMENT BAR
+         Dark green, full-width, promo copy
+         ================================================================ -->
+    <div class="dtg-announce">
+        🧠 MS MOVEMENT SUPPORT SPECIAL — 33% OFF + FREE SHIPPING
+    </div>
+
+    <!-- ================================================================
+         SECTION 2: COUNTDOWN BAR
+         Brown bar: "Limited Offer" label + yellow badge + countdown timer
+         ================================================================ -->
+    <div class="dtg-countdown-bar">
+        <span class="dtg-countdown-bar__label">Limited Offer</span>
+        <span class="dtg-countdown-bar__badge">UP TO 33% OFF</span>
+        <div class="dtg-timer">
+            <div class="dtg-timer__card">
+                <span id="dtg-hrs" class="dtg-timer__num">01</span>
+                <span class="dtg-timer__unit">HRS</span>
+            </div>
+            <span class="dtg-timer__sep">:</span>
+            <div class="dtg-timer__card">
+                <span id="dtg-min" class="dtg-timer__num">59</span>
+                <span class="dtg-timer__unit">MIN</span>
+            </div>
+            <span class="dtg-timer__sep">:</span>
+            <div class="dtg-timer__card">
+                <span id="dtg-sec" class="dtg-timer__num">54</span>
+                <span class="dtg-timer__unit">SEC</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================================
+         SECTION 3: ARTICLE HEADER
+         H1 headline, author byline, summary paragraph, divider
+         ================================================================ -->
+    <div class="dtg-article">
+
+        <h1 class="dtg-article__title">8 Reasons Why MS Patients on Medication Are Adding This Morning Coffee to Finally Address What Their DMT Can't</h1>
+
+        <div class="dtg-article__byline">
+            <div class="dtg-article__avatar">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/author_jade.png?v=1783698922" alt="Jade M." width="52" height="52">
+            </div>
+            <div class="dtg-article__byline-text">
+                By <strong>Jade M.</strong><br>
+                Last updated <span id="dtg-date"><!-- dynamic --></span>
+            </div>
+        </div>
+
+        <p class="dtg-article__summary">The relapse rate is down. The MRI looks stable. By every clinical measure, the treatment is "working." And yet people living with MS keep losing movement — the grip that used to hold a mug, the leg that drags by afternoon, the balance that shifts whether the chart says it should or not. <strong>There's a biological reason for that gap — and it has nothing to do with how faithfully someone takes their medication.</strong></p>
+
+        <hr class="dtg-article__divider">
+
+    </div>
+
+    <!-- ================================================================
+         SECTION 4: LISTICLE ITEMS (repeat for N items)
+         Each: image left (360px) | number + title + body right
+         ================================================================ -->
+    <div class="dtg-items">
+
+        <!-- ITEM 1 -->
+        <div class="dtg-item">
+            <div class="dtg-item__img">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/item_1_pill.png?v=1783698926" alt="A hand placing a single pill beside a glass of water on a kitchen counter in morning light">
+            </div>
+            <div class="dtg-item__content">
+                <h2 class="dtg-item__title">1. Your Medication Was Designed to Do One Thing — And Movement Recovery Isn't It</h2>
+                <div class="dtg-item__body">
+                    <p><strong>🛡️ The Treatment Gap</strong></p><p>Disease-modifying therapies do something genuinely important: they slow the immune system's attack on myelin. For many people, they reduce relapse frequency and slow the rate of new lesion formation. That's real.</p><p><strong>But not a single FDA-approved MS drug is designed to repair the myelin that's already been damaged.</strong> Not Ocrevus. Not Kesimpta. Not Tecfidera. They defend the wiring. They don't rebuild it.</p><p>This is why an MRI can look stable while someone's walking gets worse. The immune attack has slowed. The underlying repair process hasn't started. And the movement keeps slipping in the gap between those two things.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="dtg-item">
+            <div class="dtg-item__img">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/item_2_wire.png?v=1783698930" alt="Macro shot of a copper wire with frayed insulation exposing the strands underneath">
+            </div>
+            <div class="dtg-item__content">
+                <h2 class="dtg-item__title">2. The Reason Movement Keeps Declining Isn't the Disease "Progressing" — It's a Supply Problem</h2>
+                <div class="dtg-item__body">
+                    <p><strong>🔬 The Remyelination Gap</strong></p><p>MS strips the protective myelin coating off nerve fibres. Without it, movement signals from the brain travel through damaged wiring — arriving late, distorted, or not at all. That's the leg that drags. The hand that won't grip. The foot that doesn't lift.</p><p>The brain has cells called oligodendrocytes whose entire job is to repair and replace that myelin. They're ready to work. But they need specific raw materials to do it — particularly a protein called Nerve Growth Factor (NGF) that activates the remyelination process.</p><p><strong>Without NGF, the repair crew shows up but has nothing to build with.</strong> No amount of medication changes this. The supply shortage is separate from the immune suppression — addressing one doesn't address the other.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="dtg-item">
+            <div class="dtg-item__img">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/item_3_water.png?v=1783698934" alt="Orange and red watercolour bleeding through water in a glass dish, seen from above">
+            </div>
+            <div class="dtg-item__content">
+                <h2 class="dtg-item__title">3. Chronic Neuroinflammation Keeps Blocking the Repair Even When Relapses Are Under Control</h2>
+                <div class="dtg-item__body">
+                    <p><strong>🔥 The Inflammation That Stays</strong></p><p>Here's what most treatment conversations leave out: even when the acute autoimmune attack on myelin is slowed by a DMT, chronic low-level neuroinflammation continues in the affected areas of the nervous system. Overactive microglia — the brain's immune cells — stay in a destructive state, and that ongoing inflammation creates a hostile environment that blocks oligodendrocytes from laying down new myelin.</p><p>The fire never fully goes out. And repair can't happen on a live fire site.</p><p>This is the part of MS pathology that sits entirely outside what DMTs are engineered to reach. The immune suppression is upstream. <strong>The chronic neuroinflammatory environment that blocks remyelination is a separate problem — and it needs a separate solution.</strong></p><p><a class="dtg-inline-cta" href="https://tryrestural.com/neurofuel?utm_source=listicle&utm_medium=lp&utm_campaign=ms-dmt-gap" onclick="if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');"><strong>👉 Give the repair process what it actually needs →</strong></a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div class="dtg-item">
+            <div class="dtg-item__img">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/item_4_mushrooms.png?v=1783698938" alt="Flat lay of four dried medicinal mushroom varieties on a slate surface">
+            </div>
+            <div class="dtg-item__content">
+                <h2 class="dtg-item__title">4. Four Mushroom Extracts With Decades of Research Behind Them — Doing Exactly What's Missing</h2>
+                <div class="dtg-item__body">
+                    <p><strong>🧪 The Compounds That Fill the Gap</strong></p><p>Lion's Mane (<em>Hericium erinaceus</em>) contains compounds called hericenones and erinacines — among the few orally bioavailable substances known to cross the blood-brain barrier and stimulate NGF production in oligodendrocytes. This is the direct signal the remyelination process depends on.</p><p>Chaga (<em>Inonotus obliquus</em>) delivers antioxidant polyphenols and triterpenes that modulate overactive microglia, shifting them from a destructive state toward a regulatory one. That's the chronic inflammation at the repair site getting actively addressed.</p><p>Cordyceps improves mitochondrial oxygen use and fights the deep fatigue MS inflicts — the kind that stops people getting through physical therapy or daily movement practice. And Reishi supports the immune balance and slow-wave sleep architecture when the brain consolidates its repair work.</p><p><strong>None of this is new research.</strong> Lion's Mane has been studied for NGF stimulation since the 1990s. Chaga has three decades of anti-neuroinflammatory data. No one had combined all four at therapeutic doses and put them in front of the people who actually need them.</p><p><a class="dtg-inline-cta" href="https://tryrestural.com/neurofuel?utm_source=listicle&utm_medium=lp&utm_campaign=ms-dmt-gap" onclick="if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');"><strong>👉 See the full formula at tryrestural.com/neurofuel →</strong></a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div class="dtg-item">
+            <div class="dtg-item__img">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/item_5_coffee_rx.png?v=1783698942" alt="A mug of black coffee beside a small prescription bottle on a wooden surface">
+            </div>
+            <div class="dtg-item__content">
+                <h2 class="dtg-item__title">5. It Works Alongside Medication — It Doesn't Replace It</h2>
+                <div class="dtg-item__body">
+                    <p><strong>✅ Complementary, Not Competing</strong></p><p>This is the question that comes up every time: "Will this interfere with my DMT?"</p><p>The answer is no — and by design. NeuroFuel is a mushroom-extract coffee, not a drug. <strong>It targets the mechanisms DMTs don't reach:</strong> NGF stimulation, neuroinflammatory modulation, mitochondrial energy support, and sleep-dependent repair consolidation. None of those pathways interact with how immunomodulatory therapies work.</p><p>The positioning is deliberate. DMT handles the immune suppression. NeuroFuel supports the repair side — the half of the equation that determines whether movement actually stabilises or keeps declining. They're not competing. They're operating on completely different parts of the problem.</p><p>No additional pill burden. No dosing schedule to track. No side effects to manage on top of the ones already in the mix.</p><p><a class="dtg-inline-cta" href="https://tryrestural.com/neurofuel?utm_source=listicle&utm_medium=lp&utm_campaign=ms-dmt-gap" onclick="if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');"><strong>👉 Non-invasive, pill-free, zero side effects →</strong></a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div class="dtg-item">
+            <div class="dtg-item__img">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/item_6_clinician.png?v=1783698947" alt="A woman clinician speaking with a patient seated across from her in a calm office">
+            </div>
+            <div class="dtg-item__content">
+                <h2 class="dtg-item__title">6. Specialists Are Paying Attention</h2>
+                <div class="dtg-item__body">
+                    <p><strong>🩺 What Neurological Rehabilitation Clinicians Are Saying</strong></p><p><em>"The biggest gap in MS treatment is that we have drugs that slow the immune attack, but almost nothing that actively supports myelin repair. The oligodendrocytes are still there. The brain's repair capacity is still there. But without the right nutritional support — specifically Nerve Growth Factor stimulation — the remyelination process stalls."</em></p><p>— <strong>Dr. Elena Torres, DPT, Neurological Rehabilitation, Phoenix</strong></p><p><em>"My MS patients spend significant money annually on disease-modifying therapies and still watch their movement decline year after year. No FDA-approved drug is designed to repair myelin or restore lost motor function. When I started recommending neuroprotective supplementation alongside standard treatment, <strong>82% of patients reported meaningful improvement in walking stability and coordination within 2 to 3 weeks</strong> of consistent use."</em></p><p>— <strong>Dr. David Park, MD, Physiatrist, Northwestern Rehabilitation Center</strong></p><p><a class="dtg-inline-cta" href="https://tryrestural.com/neurofuel?utm_source=listicle&utm_medium=lp&utm_campaign=ms-dmt-gap" onclick="if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');"><strong>👉 Read more about the formula →</strong></a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 7 -->
+        <div class="dtg-item">
+            <div class="dtg-item__img">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/item_7_mug.png?v=1783698950" alt="Hands wrapped around a white ceramic mug with steam rising, window light behind">
+            </div>
+            <div class="dtg-item__content">
+                <h2 class="dtg-item__title">7. The Compliance Problem Is Already Solved</h2>
+                <div class="dtg-item__body">
+                    <p><strong>☕ A Ritual You'll Actually Keep</strong></p><p>Here's a problem with supplement stacks for people managing MS: the pill burden is already high. Adding another capsule regimen means adding another thing to forget, deprioritise, or stop during a bad week.</p><p><strong>NeuroFuel puts all four mushroom extracts into a single morning coffee.</strong> Blue Mountain base. Smooth taste. The kind of thing people look forward to rather than treating as another obligation.</p><p>The compliance mechanism is the point. Lion's Mane, Chaga, Cordyceps, and Reishi at therapeutic doses, every morning, without thinking about it. Not buried in a drawer by month three. Not sitting next to a pill organiser someone already dreads refilling.</p><p>Non-invasive. Pill-free. Zero side effects. Works alongside existing medications. $1.35 a day.</p><p><a class="dtg-inline-cta" href="https://tryrestural.com/neurofuel?utm_source=listicle&utm_medium=lp&utm_campaign=ms-dmt-gap" onclick="if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');"><strong>👉 Start the habit at tryrestural.com/neurofuel →</strong></a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ITEM 8 — final item bridges into the offer section -->
+        <div class="dtg-item">
+            <div class="dtg-item__img">
+                <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/item_8_delivery.png?v=1783698955" alt="Hands holding an open cardboard box with a product canister inside, front door behind">
+            </div>
+            <div class="dtg-item__content">
+                <h2 class="dtg-item__title">8. There's a 90-Day Guarantee and a Return Rate Under 0.5%</h2>
+                <div class="dtg-item__body">
+                    <p><strong>👍 Risk-Free, or the Money Comes Back</strong></p><p>NeuroFuel is backed by a 90-day money-back guarantee. Drink it every morning for three months. If it doesn't make a meaningful difference, send it back for a full refund — no questions asked.</p><p><strong>The return rate on the last 10,000 orders is under 0.5%.</strong> That number says something. People who try it, keep it.</p><p>This matters especially if you've already spent real money on PT, on supplements that didn't do anything, on the $90,000-a-year medication that kept the chart looking fine while the walking kept getting harder. The 90-day window removes the financial risk entirely — the only thing at stake is three months of a morning coffee.</p><p><strong>If you've read this far, you already know the gap is real.</strong> The medication is doing its job. The immune attack has slowed. But the myelin that's already been damaged still isn't getting the repair support it needs — because no DMT delivers NGF, no prescription calms the chronic neuroinflammatory environment blocking remyelination, and no pill addresses the fatigue and sleep disruption that stack on top of everything else.</p><p>NeuroFuel was built for exactly this gap. One morning coffee. Four mushroom extracts. The mechanisms your treatment plan has been leaving untouched.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ================================================================
+         SECTION 5: OFFER SECTION
+         Warm cream bg (#fff6ee), "Limited Offer" tag, 2-col offer card
+         ================================================================ -->
+    <div class="dtg-offer-section">
+        <div class="dtg-offer-section__inner">
+
+            <div class="dtg-offer-card">
+
+                <!-- Left: product image -->
+                <div class="dtg-offer-card__img">
+                    <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_cuh.png?v=1774238143" alt="NeuroFuel mushroom-coffee canister">
+                </div>
+
+                <!-- Right: offer content -->
+                <div class="dtg-offer-card__content">
+
+                    <!-- "Limited Offer" green tag — rendered above card via absolute positioning -->
+                    <div class="dtg-offer-tag">Limited Offer</div>
+
+                    <!-- "FREE Gifts With Your Order! 🎁" with flanking lines -->
+                    <div class="dtg-offer-card__subline">
+                        <span class="dtg-offer-card__subline-rule"></span>
+                        <span>FREE GIFTS WITH YOUR ORDER 🎁</span>
+                        <span class="dtg-offer-card__subline-rule"></span>
+                    </div>
+
+                    <!-- Main offer heading -->
+                    <h2 class="dtg-offer-card__title">
+                        <em>UP TO 33% OFF</em> FOR A<br>LIMITED TIME ONLY!
+                    </h2>
+
+                    <!-- Body -->
+                    <p class="dtg-offer-card__body">This limited-time deal is in high demand and stock keeps selling out.</p>
+
+                    <!-- CTA button -->
+                    <a href="https://tryrestural.com/neurofuel?utm_source=listicle&utm_medium=lp&utm_campaign=ms-dmt-gap" class="dtg-offer-card__cta" onclick="if(typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');">
+                        GET 33% OFF NOW
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"/></svg>
+                    </a>
+
+                    <!-- Deal ending countdown -->
+                    <div class="dtg-offer-card__deal">
+                        DEAL ENDING IN: <span id="dtg-offer-timer" class="dtg-offer-card__deal-timer">01:59:00</span>
+                    </div>
+
+                    <!-- Sell-out + shipping badges -->
+                    <div class="dtg-offer-card__badges">
+                        SELL OUT RISK: <strong>High</strong> | <span class="dtg-free"><strong>FREE</strong></span> shipping
+                    </div>
+
+                    <!-- Guarantee line -->
+                    <p class="dtg-offer-card__guarantee">Try it today with a 90-Day Money-Back Guarantee!</p>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ================================================================
+         SECTION 6: FOOTER
+         Sage green bg, logo, "Stay Connected", nav links, copyright
+         ================================================================ -->
+    <div class="dtg-footer">
+        <div class="dtg-footer__logo">
+            <img src="https://cdn.shopify.com/s/files/1/0741/8282/0057/files/nf_cuh.png?v=1774238143" alt="NeuroFuel">
+        </div>
+        <p class="dtg-footer__heading">Stay Connected</p>
+        <p class="dtg-footer__body">Follow us on Facebook and Instagram to be the first to know about exclusive discounts, new product launches, and more.</p>
+        <nav class="dtg-footer__links">
+            <a href="https://restural.com/policies/refund-policy">Refund Policy</a>
+            <a href="https://restural.com/policies/privacy-policy">Privacy Policy</a>
+            <a href="https://restural.com/policies/terms-of-service">Terms of Service</a>
+            <a href="https://restural.com/pages/contact">Contact Information</a>
+        </nav>
+        <p class="dtg-footer__copyright" style="max-width:var(--dtg-content-width);margin:8px auto 0;font-size:12px;line-height:1.6;opacity:.8;">This article is for informational purposes only and does not constitute medical advice. NeuroFuel is a dietary supplement and is not intended to diagnose, treat, cure, or prevent any disease. It is not a replacement for prescribed MS medication. Individual results vary.</p>
+        <p class="dtg-footer__copyright">© 2025, <a href="https://restural.com">NeuroFuel</a></p>
+    </div>
+
+    <!-- ================================================================
+         JAVASCRIPT: Countdown Timers + Dynamic Date
+         ================================================================ -->
+    <script>
+        /* ----------------------------------------------------------
+           Countdown Bar Timer (counts from 2 hrs, resets each load)
+           ---------------------------------------------------------- */
+        (function() {
+            var total = 2 * 60 * 60; // 2 hours in seconds
+            function tick() {
+                var h = Math.floor(total / 3600);
+                var m = Math.floor((total % 3600) / 60);
+                var s = total % 60;
+                var fmt = function(n) { return n < 10 ? '0' + n : '' + n; };
+                var elH = document.getElementById('dtg-hrs');
+                var elM = document.getElementById('dtg-min');
+                var elS = document.getElementById('dtg-sec');
+                if (elH) elH.textContent = fmt(h);
+                if (elM) elM.textContent = fmt(m);
+                if (elS) elS.textContent = fmt(s);
+                // Offer card timer
+                var offerEl = document.getElementById('dtg-offer-timer');
+                if (offerEl) offerEl.textContent = fmt(h) + ':' + fmt(m) + ':' + fmt(s);
+                if (total > 0) { total--; setTimeout(tick, 1000); }
+            }
+            tick();
+        })();
+
+        /* ----------------------------------------------------------
+           Dynamic Date: "Last updated" set to 3 days ago
+           ---------------------------------------------------------- */
+        (function() {
+            var d = new Date();
+            d.setDate(d.getDate() - 3);
+            var dd = String(d.getDate()).padStart(2, '0');
+            var mm = String(d.getMonth() + 1).padStart(2, '0');
+            var yyyy = d.getFullYear();
+            var el = document.getElementById('dtg-date');
+            if (el) el.textContent = dd + '/' + mm + '/' + yyyy;
+        })();
+    </script>
+
+</body>
+</html>
